@@ -69,7 +69,7 @@ body.ready .header{animation:slideIn .8s ease forwards .1s}
 
 /* Типографика */
 .text1{font:700 clamp(2.5rem,7vw,7rem) "Inika",sans-serif;line-height:.9;color:#29c770;text-shadow:0 0 10px rgba(41,199,112,.25),0 0 40px rgba(41,199,112,.15);filter:drop-shadow(0 3px 8px rgba(0,0,0,.2))}
-.text2{font:800 clamp(3rem,12vw,14rem) "Inika",sans-serif;color:rgba(255,255,255,.08);-webkit-text-stroke:2px rgba(255,255,255,.7);letter-spacing:4px}
+.text2{font:800 clamp(3rem,12vw,14rem) "Inika",sans-serif;color:rgba(255,255,255,.08);-webkit-text-stroke:2px rgba(255,255,255,.8);letter-spacing:4px}
 .text3{font:400 italic clamp(1rem,1.2vw,1.4rem) "Inika",serif;max-width:600px;line-height:1.7;animation:colorBreath 4s ease-in-out 1.4s infinite}
 
 /* Кнопка в стиле хедера */
@@ -93,7 +93,7 @@ body.ready .button1{animation:rise .8s ease .8s both}
   .page1{text-align:center}
   .page1-text{align-items:center;padding:20px}
   .text1{font-size:clamp(2rem,10vw,3rem);text-shadow:none;filter:none}
-  .text2{-webkit-text-stroke:1px rgba(255,255,255,.6);font-size:clamp(2.2rem,12vw,3.2rem);letter-spacing:2px}
+  .text2{-webkit-text-stroke:1px rgba(255,255,255,.8);font-size:clamp(4rem,13vw,5rem);letter-spacing:2px}
   .text3{font-size:.95rem;max-width:90%}
   .button1{margin-top:1.2rem}
   .button1 button{padding:10px 28px;font-size:.95rem}
