@@ -60,23 +60,18 @@ body.ready .header{animation:slideIn .8s ease forwards .1s}
 @media(max-width:768px){
   .webback{width:auto;height:100svh;background-position:center top;}
 }
-
 /* ==== PAGE 1 ==== */
 .page1{position:relative;display:flex;align-items:center;justify-content:center;height:100vh;background:none;color:#e7f2ec;overflow:hidden;text-align:left}
 .page1-text{display:flex;flex-direction:column;width:100%;max-width:1400px;padding:40px;position:relative;cursor:default}
-
 /* Типографика */
 .text1{font:700 clamp(2.5rem,7vw,7rem) "Inika",sans-serif;line-height:.9;color:#29c770;text-shadow:0 0 10px rgba(41,199,112,.25),0 0 40px rgba(41,199,112,.15);filter:drop-shadow(0 3px 8px rgba(0,0,0,.2))}
 .text2{font:800 clamp(3rem,12vw,14rem) "Inika",sans-serif;color:rgba(255,255,255,.08);-webkit-text-stroke:2px rgba(255,255,255,.8);letter-spacing:4px}
 .text3{font:400 italic clamp(1rem,1.2vw,1.4rem) "Inika",serif;max-width:600px;line-height:1.7;animation:colorBreath 4s ease-in-out 1.4s infinite}
-
 /* Кнопка в стиле хедера */
 .button1{margin-top:2rem}
 .button1 button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 36px;background:rgba(11,15,13,.6);border:2px solid rgba(41,199,112,.5);border-radius:50px;color:#e7f2ec;font:600 1rem "Montserrat",system-ui,sans-serif;letter-spacing:.5px;cursor:pointer;backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35);transition:all .3s ease}
 .button1 button:hover{border-color:#29c770;color:#29c770;transform:translateY(-2px)}
-
 /* === Входные анимации при загрузке === */
-/* стартовые состояния */
 .text1,.text2,.text3,.button1{opacity:0;transform:translateY(40px)}
 /* включаем по готовности (после лоадера у тебя добавляется body.ready) */
 body.ready .text1{animation:rise .9s cubic-bezier(.25,.1,.25,1) .15s both}
@@ -85,7 +80,6 @@ body.ready .text3{animation:rise 1s cubic-bezier(.25,.1,.25,1) .55s both,colorBr
 body.ready .button1{animation:rise .8s ease .8s both}
 @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 @keyframes colorBreath{0%,100%{color:#e7f2ec}50%{color:#29c770}}
-
 /* ==== Mobile: всё по центру и читабельно ==== */
 @media (max-width:768px){
   .page1{text-align:center}
@@ -96,12 +90,59 @@ body.ready .button1{animation:rise .8s ease .8s both}
   .button1{margin-top:1.2rem}
   .button1 button{padding:10px 28px;font-size:.95rem}
 }
-/* KILL-SWITCH: Отключить любой туман/оверлей, где бы он ни был */
-body::before,body::after,
-.webback::before,.webback::after,
-.page1::before,.page1::after,
-section::before,section::after,
-*[style*="mix-blend-mode"]{
-  display:none!important; background:none!important; opacity:0!important;
+/* ==== TOURS PREVIEW ==== */
+.tours-preview{position:relative;padding:10px 40px;background:none;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;overflow:hidden}
+.tours-inner{max-width:1400px;margin:0 auto}
+.tours-title{font:700 clamp(2.2rem,5vw,3rem) "Inika",serif;color:#29c770;text-align:left;margin-bottom:15px;text-shadow:0 0 10px rgba(41,199,112,.25)}
+
+/* ==== LAYOUT ==== */
+.tours-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
+.side-tours{display:flex;flex-direction:column;gap:40px}
+
+/* ==== CARD BASE ==== */
+.tour-card{background:rgba(11,15,13,.75);border:1px solid rgba(41,199,112,.15);border-radius:22px;box-shadow:0 6px 22px rgba(0,0,0,.35);overflow:hidden;transition:transform .4s ease,border-color .3s ease;cursor:pointer}
+.tour-card:hover{transform:translateY(-6px);border-color:rgba(41,199,112,.4)}
+.tour-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:filter .4s ease}
+.tour-card:hover img{filter:brightness(1)}
+.tour-card .info{padding:20px 24px 28px}
+.tour-card h3{color:#29c770;font:700 1.3rem "Inika",serif;margin:0 0 8px}
+.tour-card p{color:rgba(231,242,236,.85);font-size:.95rem;line-height:1.5}
+
+/* ==== BIG MAIN CARD (Killarney) ==== */
+.tour-card.big{display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(11,15,13,.85);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.tour-card.big img{width:100%;height:400px;object-fit:cover;filter:brightness(.85);transition:filter .4s ease;display:block;flex-shrink:0}
+.tour-card.big:hover img{filter:brightness(1)}
+.tour-card.big .info{position:static;padding:24px 32px;box-sizing:border-box;animation:fadeUp .6s ease both}
+.tour-card.big h3{color:#29c770;font:700 1.6rem "Inika",serif;margin-bottom:10px}
+.tour-card.big .desc{font-size:.95rem;line-height:1.6;color:rgba(231,242,236,.9);max-width:600px;margin-bottom:20px}
+
+/* ==== BUTTONS ==== */
+.book-btn,.more-btn{display:inline-flex;align-items:center;justify-content:center;background:rgba(11,15,13,.6);border:2px solid rgba(41,199,112,.5);color:#e7f2ec;text-decoration:none;transition:all .3s ease;backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35)}
+.book-btn{padding:10px 28px;border-radius:30px;font:600 .95rem "Montserrat"}
+.more-btn{padding:12px 36px;border-radius:40px;font:600 1rem "Montserrat"}
+.book-btn:hover,.more-btn:hover{color:#29c770;border-color:#29c770;transform:translateY(-2px)}
+.more-tours{margin-top:30px;text-align:center}
+
+/* ==== SMALL CARDS ==== */
+.tour-card.small img{height:200px}
+
+/* ==== ANIMATION ==== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ==== ADAPTIVE ==== */
+@media(max-width:1000px){
+  .tours-layout{grid-template-columns:1fr}
+  .side-tours{flex-direction:row;gap:20px}
+  .tour-card.small img{height:180px}
+  .tour-card.big img{height:320px}
+  .tour-card.big .info{padding:25px}
 }
-*{filter:none!important; backdrop-filter:none!important; mix-blend-mode:normal!important;}
+@media(max-width:700px){
+  .tours-title{text-align:center}
+  .tours-preview{padding:80px 20px}
+  .side-tours{flex-direction:column}
+  .tour-card.big img{height:240px}
+  .tour-card h3{font-size:1.2rem}
+  .tour-card.big .desc{font-size:.9rem}
+  .more-btn{padding:10px 28px;font-size:.95rem}
+}

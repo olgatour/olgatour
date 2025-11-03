@@ -80,3 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeItems.forEach(el => observer.observe(el));
 });
+//Smooth scroll to Tours section
+document.getElementById("button1")?.addEventListener("click", () => {
+  const target = document.querySelector("#toursPreview");
+  if (target) target.scrollIntoView({ behavior: "smooth" });
+});
