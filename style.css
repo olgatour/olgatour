@@ -121,7 +121,7 @@ body.ready .button1{animation:rise .8s ease .8s both}
 .book-btn{padding:10px 28px;border-radius:30px;font:600 .95rem "Montserrat"}
 .more-btn{padding:12px 36px;border-radius:40px;font:600 1rem "Montserrat"}
 .book-btn:hover,.more-btn:hover{color:#29c770;border-color:#29c770;transform:translateY(-2px)}
-.more-tours{margin-top:30px;text-align:center}
+.more-tours{margin-top:30px;margin-bottom:15px;text-align:center}
 
 /* ==== SMALL CARDS ==== */
 .tour-card.small img{height:200px}
@@ -145,4 +145,78 @@ body.ready .button1{animation:rise .8s ease .8s both}
   .tour-card h3{font-size:1.2rem}
   .tour-card.big .desc{font-size:.9rem}
   .more-btn{padding:10px 28px;font-size:.95rem}
+}
+/* ==== WHY CLOVERTOUR ==== */
+.why-section {
+  position: relative;
+  padding: 80px 40px;
+  background: none;
+  color: #e7f2ec;
+  font-family: "Montserrat", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.why-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-title {
+  font: 700 clamp(2.2rem, 5vw, 3rem) "Inika", serif;
+  color: #29c770;
+  text-align: left;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px rgba(41,199,112, 0.25);
+}
+
+/* ==== GRID 2x2 ==== */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: stretch;
+}
+
+/* ==== CARD ==== */
+.why-card {
+  background: rgba(11, 15, 13, 0.5);
+  border: 2px solid rgba(41,199,112, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  background: rgba(11, 15, 13, 0.75);
+  transform: translateY(-6px);
+  border-color: rgba(41,199,112, 0.4);
+  box-shadow: 0 0 25px rgba(41,199,112, 0.15);
+}
+
+.why-card h3 {
+  font: 600 1.3rem "Montserrat", sans-serif;
+  color: #29c770;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: #cdd8d3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==== ADAPTIVE ==== */
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-section {
+    padding: 60px 20px;
+  }
+  .why-card {
+    padding: 25px 20px;
+  }
 }
