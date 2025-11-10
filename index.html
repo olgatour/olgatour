@@ -6,131 +6,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Clovertour - discover the beauty of Ireland through unique tours and adventures">
     <meta name="theme-color" content="#0b3d2e">
-    <!--Fonts-->
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Jockey+One&family=Lobster&family=Montserrat:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Montserrat:wght@100..900&display=swap"
         rel="stylesheet" />
-    <!--Styles-->
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <!--Fav ico-->
+    <link rel="stylesheet" href="mobile.css">
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon/32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon/16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicon/180x180.png" />
+
     <title>Clovertour</title>
 </head>
 
 <body>
-    <!--Loader-->
-    <div id="pageloader" aria-hidden="true">
-        <div class="clover"><i></i></div>
-    </div>
-    <!--Background-->
+    <!-- Loader -->
+    <div id="pageloader"><div class="clover"><i></i></div></div>
+
+    <!-- Background -->
     <div class="webback">
         <img class="webback" src="img/back/webback.webp" alt="Background Image">
     </div>
-    <!--Header-->
+
+    <!-- Header -->
     <header class="header">
         <a href="#" class="logo">Clovertour</a>
-        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
         <nav class="menu" id="menu">
-            <a href="tours.html" data-i18n="tours">Tours</a>
-            <a href="#" data-i18n="about">About</a>
-            <a href="#" data-i18n="contact">Contact</a>
+            <a href="tours.html" data-i18n="nav_tours">Tours</a>
+            <a href="#about" data-i18n="nav_about">About Us</a>
+            <a href="#contacts" data-i18n="nav_contact">Contacts</a>
             <div class="language" id="langSwitch" data-lang="EN"></div>
         </nav>
     </header>
-    <!--WEBSITE-->
-    <section class="page1 fade-item" id="page1">
+
+    <!-- HERO -->
+    <section class="page1 fade-item" id="home">
         <div class="page1-text fade-item">
-            <div class="text1" data-i18n="text1">YOUR JOURNEY</br>BEGINS HERE</div>
+            <div class="text1" data-i18n="hero_title">YOUR JOURNEY<br>BEGINS HERE</div>
             <div class="text2">CLOVERTOUR</div>
-            <div class="text3" data-i18n="text3">Where the wind sings ancient songs,</br> and the land holds the breath
-                of
-                ages</div>
+            <div class="text3" data-i18n="hero_subtitle">Where the wind sings ancient songs,<br>and the land keeps the
+                breath of ages</div>
+
             <div class="button1">
-                <button id="button1" data-i18n="button1">Explore more</button>
+                <button id="button1" data-i18n="hero_button">Explore more</button>
             </div>
         </div>
     </section>
-    <!--TOURS-->
+
+    <!-- TOURS PREVIEW -->
     <section class="tours-preview fade-item" id="toursPreview">
         <div class="tours-inner">
-            <h2 class="tours-title">POPULAR TOURS</h2>
+            <h2 class="tours-title" data-i18n="tours_preview_title">POPULAR TOURS</h2>
 
             <div class="tours-layout">
-                <!-- Big Killarney Card -->
+                <!-- Big Killarney -->
                 <div class="tour-card big">
                     <img src="img/tours/killarney.jpg" alt="Killarney" loading="lazy">
                     <div class="info">
-                        <h3>Killarney</h3>
-                        <p class="desc">
+                        <h3 data-i18n="tour_killarney_title">Killarney</h3>
+                        <p class="desc" data-i18n="tour_killarney_desc">
                             Killarney County Kerry — a journey through Ireland’s most magical landscapes.
-                            Hear the secrets of the Shannon River Bay, visit Ross Castle, and sail across
-                            Lake Killarney where legends whisper of an underwater kingdom. Wander through
-                            the ancient abbey, explore Muckross House, and finish surrounded by the natural
-                            beauty of Killarney National Park.
                         </p>
-                        <a href="tours.html" class="book-btn">Read More</a>
+                        <a href="tours.html" class="book-btn" data-i18n="btn_readmore">Read More</a>
                     </div>
                 </div>
 
-                <!-- Right Column -->
                 <div class="side-tours">
                     <div class="tour-card small">
                         <img src="img/tours/cork.jpg" alt="Cork & Titanic Experience" loading="lazy">
                         <div class="info">
-                            <h3>Cork & Titanic</h3>
-                            <p>Walk through history — from Elizabeth Fort to the Titanic Museum in Cobh.</p>
+                            <h3 data-i18n="tour_cork_title">Cork & Titanic</h3>
+                            <p data-i18n="tour_cork_desc">Walk through history — from Elizabeth Fort to the Titanic Museum.</p>
                         </div>
                     </div>
 
                     <div class="tour-card small">
                         <img src="img/tours/dingle.jpg" alt="Dingle Peninsula" loading="lazy">
                         <div class="info">
-                            <h3>Dingle Peninsula</h3>
-                            <p>Rugged cliffs, wild Atlantic views, and the charm of Dingle’s colorful town.</p>
+                            <h3 data-i18n="tour_dingle_title">Dingle Peninsula</h3>
+                            <p data-i18n="tour_dingle_desc">Rugged cliffs and wild Atlantic views.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="more-tours">
-                <a href="tours.html" class="more-btn">View All Tours</a>
+                <a href="tours.html" class="more-btn" data-i18n="btn_viewall">View All Tours</a>
             </div>
         </div>
     </section>
-    <!--Why-->
+
+    <!-- WHY CLOVERTOUR -->
     <section id="why" class="why-section fade-item">
         <div class="why-inner">
-            <h2 class="why-title">WHY CLOVERTOUR</h2>
+            <h2 class="why-title" data-i18n="why_title">WHY CLOVERTOUR</h2>
 
             <div class="why-grid">
                 <div class="why-card">
-                    <h3>🌿 Authetic Experience</h3>
-                    <p>We don't sell tours - we share real Irish stories. Every route is handpicked, every stop has a soul.</p>
+                    <h3 data-i18n="why_1_title">🌿 Authentic Experience</h3>
+                    <p data-i18n="why_1_desc">We don’t just offer tours — we share real Irish stories.</p>
                 </div>
 
                 <div class="why-card">
-                    <h3>🚐 Small Groups, Big Memories</h3>
-                    <p>No noisy crowds or rushed schedules - just comfort, space, and time to enjoy what matters.</p>
+                    <h3 data-i18n="why_2_title">🚐 Small Groups</h3>
+                    <p data-i18n="why_2_desc">Comfort, space, and time to truly enjoy your journey.</p>
                 </div>
 
                 <div class="why-card">
-                    <h3>☘️ Local Guides</h3>
-                    <p>Our team lives here. We know hidden spots, local legends, and the perfect photo angles.</p>
+                    <h3 data-i18n="why_3_title">☘️ Local Guides</h3>
+                    <p data-i18n="why_3_desc">We know the hidden places and the best views.</p>
                 </div>
 
                 <div class="why-card">
-                    <h3>💫 Easy & Flexible</h3>
-                    <p>Simple booking, instant comfirmation, and support that actually answers.</p>
+                    <h3 data-i18n="why_4_title">💫 Flexible & Easy</h3>
+                    <p data-i18n="why_4_desc">Simple booking, instant confirmation, and responsive support.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="about-section fade-item">
+        <div class="about-inner">
+            <h2 class="about-title" data-i18n="about_title">ABOUT US</h2>
+
+            <p class="about-text" data-i18n="about_text">
+                Clovertour was created to make discovering Ireland simple, beautiful, and meaningful.
+            </p>
+
+            <div class="about-facts">
+                <div class="fact-card" data-i18n="about_fact1">Eco-friendly routes</div>
+                <div class="fact-card" data-i18n="about_fact2">Supporting local places</div>
+                <div class="fact-card" data-i18n="about_fact3">Modern design</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contacts" class="contacts-section fade-item">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="contacts_title">CONTACTS</h2>
+            </div>
+
+            <div class="grid contacts-grid">
+
+                <form class="item contacts-form" id="form">
+                    <label for="name" class="muted" data-i18n="form_name">Name</label>
+                    <input id="name" name="name" placeholder="Your name..." required>
+
+                    <label for="email" class="muted" data-i18n="form_email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required
+                        data-i18n="form_email_ph">
+
+                    <label for="msg" class="muted" data-i18n="form_message">Message</label>
+                    <textarea id="msg" name="msg" rows="4" placeholder="Your question..."></textarea>
+
+                    <div class="contacts-actions">
+                        <button class="btn" type="submit" data-i18n="form_send">Send</button>
+                        <span id="formStatus" class="muted" aria-live="polite"></span>
+                    </div>
+                </form>
+
+                <aside class="item contacts-info">
+                    <h3 data-i18n="contact_info_title">FIND US HERE</h3>
+                    <p class="muted">
+                        <a href="mailto:clovertourhelp@gmail.com">clovertourhelp@gmail.com</a><br>
+                        +353 000 000 000<br>
+                        <span data-i18n="contact_hours">Mon–Fri, 10:00–18:00 (IST)</span>
+                    </p>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-logo">Clovertour</a>
+
+            <nav class="footer-menu">
+                <a href="#home" data-i18n="nav_home">Home</a>
+                <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                <a href="#about" data-i18n="nav_about">About Us</a>
+                <a href="#contacts" data-i18n="nav_contact">Contacts</a>
+            </nav>
+
+            <p class="copy">© Clovertour, 2025</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
