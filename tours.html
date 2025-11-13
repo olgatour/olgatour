@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clovertour - discover the beauty of Ireland through unique tours and adventures">
+    <meta name="theme-color" content="#0b3d2e" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Montserrat:wght@100..900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+
+    <!-- Favicons (как на index.html, если есть) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon/32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon/16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicon/180x180.png" />
+
+    <title>Clovertour — Tours</title>
+</head>
+
+<body>
+    <!-- Loader (тот же, что на index.html) -->
+    <div id="pageloader"><div class="clover"><i></i></div></div>
+
+    <!-- Background -->
+    <div class="webback">
+        <img class="webback" src="img/back/webback.webp" alt="Background Image">
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html#home" class="logo">Clovertour</a>
+
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="index.html#home" data-i18n="nav_home">Home</a>
+            <a href="index.html#about" data-i18n="nav_about">About Us</a>
+            <a href="index.html#contacts" data-i18n="nav_contact">Contacts</a>
+            <div class="language" id="langSwitch" data-lang="EN"></div>
+        </nav>
+    </header>
+
+    <!-- TOURS PAGE -->
+    <section class="tours-page fade-item">
+        <div class="tours-inner">
+            <h1 class="tours-title" data-i18n="tours_page_title">All Tours</h1>
+
+            <div class="tours-list">
+
+                <!-- 1: KILLARNEY -->
+                <div class="tour-row fade-item">
+                    <img src="img/tours/killarney.jpg" alt="Killarney">
+                    <div class="info">
+                        <h3 data-i18n="tour_killarney_title">Killarney</h3>
+                        <p class="tour-route" data-i18n="tour_killarney_route">
+                            Killarney 1 day tour · Ring of Kerry · Ross Castle · Old Abbey · Muckross House · Killarney National Park
+                        </p>
+                        <p class="tour-desc" data-i18n="tour_killarney_full_desc">
+                            Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay. We will visit an incredible and mysterious place – Ross Castle. From the castle we will sail on a boat across Lake Killarney, at the bottom of which, according to legend, an entire underwater kingdom is hidden. We will continue our journey to the mysterious abbey, which houses the “living heart”. At the end of the trip we will visit one of the most beautiful, popular and largest parks in Ireland – Killarney National Park. The journey will be seasoned with real ancient Irish legends. Let your journey begin with us.
+                        </p>
+                    </div>
+                    <div class="side">
+                        <p class="price">€45</p>
+                        <button class="book-btn" data-tour="Killarney" data-i18n="btn_book">Book</button>
+                    </div>
+                </div>
+
+                <!-- 2: CORK & TITANIC -->
+                <div class="tour-row fade-item">
+                    <img src="img/tours/cork.jpg" alt="Cork & Titanic experience">
+                    <div class="info">
+                        <h3 data-i18n="tour_cork_full_title">Cork and Titanic experience</h3>
+                        <p class="tour-route" data-i18n="tour_cork_route">
+                            Cork walking tour · Elizabeth Fort · English Market · Cobh · Titanic Museum · Ireland’s highest cathedral · D. Kennedy’s town
+                        </p>
+                        <p class="tour-desc" data-i18n="tour_cork_full_desc">
+                            Discover the Cork and Titanic Heritage Tour. Step into the rich history of Cork on this captivating journey. Begin with a Cork walking tour, exploring charming streets, Elizabeth Fort and learning about the fascinating origins of this great city. Experience the lively atmosphere of the English Market, a food lover’s paradise. Continue to the picturesque town of Cobh, home to the famous Titanic Museum, where the final chapter of the great ship’s story unfolds. Visit Ireland’s highest cathedral, a stunning masterpiece overlooking the harbor. On the way, enjoy the scenic charm of D. Kennedy’s town, filled with coastal beauty and local character.
+                        </p>
+                    </div>
+                    <div class="side">
+                        <p class="price">€39</p>
+                        <button class="book-btn" data-tour="Cork and Titanic experience" data-i18n="btn_book">Book</button>
+                    </div>
+                </div>
+
+                <!-- 3: CONNEMARA & KYLEMORE -->
+                <div class="tour-row fade-item">
+                    <img src="img/tours/connemara.jpg" alt="Connemara National Park & Kylemore Abbey">
+                    <div class="info">
+                        <h3 data-i18n="tour_connemara_title">Connemara National Park & Kylemore Abbey</h3>
+                        <p class="tour-route" data-i18n="tour_connemara_route">
+                            Connemara National Park · scenic trails · panoramic viewpoints · Kylemore Abbey · Victorian Walled Garden
+                        </p>
+                        <p class="tour-desc" data-i18n="tour_connemara_full_desc">
+                            Connemara National Park & Kylemore Abbey Tour. Immerse yourself in the wild beauty of Connemara National Park, where sweeping mountains, shimmering lakes and vast boglands create some of Ireland’s most breathtaking landscapes. Enjoy scenic trails and panoramic views that capture the essence of the west. Then, step into the fairytale setting of Kylemore Abbey, a stunning 19th-century castle nestled on the shores of a tranquil lake. Discover its romantic history, stroll through the Victorian Walled Garden and feel the peaceful atmosphere of this remarkable place. This journey blends natural wonders with cultural heritage for an unforgettable Irish experience.
+                        </p>
+                    </div>
+                    <div class="side">
+                        <p class="price">€49</p>
+                        <button class="book-btn" data-tour="Connemara National Park & Kylemore Abbey" data-i18n="btn_book">Book</button>
+                    </div>
+                </div>
+
+                <!-- 4: DINGLE PENINSULA -->
+                <div class="tour-row fade-item">
+                    <img src="img/tours/dingle.jpg" alt="Dingle peninsula">
+                    <div class="info">
+                        <h3 data-i18n="tour_dingle_full_title">Dingle peninsula</h3>
+                        <p class="tour-route" data-i18n="tour_dingle_route">
+                            Dingle town · Dingle Bay · Slea Head Drive · Gallarus Oratory · Blasket Islands · ancient forts & standing stones
+                        </p>
+                        <p class="tour-desc" data-i18n="tour_dingle_full_desc">
+                            Discover the breathtaking Dingle Peninsula, where rugged cliffs meet the wild Atlantic, charming villages dot the coastline and ancient history whispers from every corner. Drive along winding coastal roads with panoramic views, explore the colourful town of Dingle with its lively pubs and artisan shops and spot playful dolphins in Dingle Bay. Marvel at unforgettable spots like Slea Head Drive, Gallarus Oratory and the Blasket Islands, and wander through unique landscapes dotted with ancient forts, standing stones and hidden beaches. This tour offers a perfect mix of adventure, culture and unforgettable scenery.
+                        </p>
+                    </div>
+                    <div class="side">
+                        <p class="price">€55</p>
+                        <button class="book-btn" data-tour="Dingle peninsula" data-i18n="btn_book">Book</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close" id="modalClose">&times;</span>
+
+            <h2 id="modalTourName" data-i18n="modal_booking_default">Booking</h2>
+
+            <form class="modal-form" id="bookingForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea placeholder="Message..."></textarea>
+
+                <button type="submit" class="book-btn full-width" data-i18n="form_send">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="index.html#home" class="footer-logo">Clovertour</a>
+
+            <nav class="footer-menu">
+                <a href="index.html#home" data-i18n="nav_home">Home</a>
+                <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                <a href="index.html#about" data-i18n="nav_about">About Us</a>
+                <a href="index.html#contacts" data-i18n="nav_contact">Contacts</a>
+            </nav>
+
+            <p class="copy">© Clovertour, 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

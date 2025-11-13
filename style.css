@@ -407,8 +407,8 @@ body.ready .button1{animation:rise .8s ease .8s both}
 }
 .contacts-inner{
   width:100%;
-  max-width:1200px;            /* ✅ как WHY и ABOUT */
-  padding:0 40px;              /* ✅ тот же внутренний паддинг */
+  max-width:1200px;
+  padding:0 40px;
   margin:0 auto;
 }
 .contacts-title{
@@ -448,19 +448,16 @@ body.ready .button1{animation:rise .8s ease .8s both}
   box-shadow:0 6px 20px rgba(0,0,0,.30);
 }
 
-/* ✅ CONTACTS NAME зелёный */
 .contacts-form label{
   font-size:.9rem;
   color:#29c770 !important;
   margin-bottom:6px;
 }
 
-/* ✅ FIX EMAIL LINK inside contacts */
 .contacts-info a{
   color:#e7f2ec!important;
   text-decoration:none!important;
 }
-
 .contacts-info a:hover{
   color:#29c770!important;
 }
@@ -511,7 +508,6 @@ body.ready .button1{animation:rise .8s ease .8s both}
   text-transform:none!important;
   letter-spacing:0!important;
 }
-
 .contacts-info p{
   color:#cdd8d3;
   font-size:.95rem;
@@ -564,3 +560,175 @@ body.ready .button1{animation:rise .8s ease .8s both}
 }
 
 
+/* ========================= */
+/*        TOURS PAGE         */
+/* ========================= */
+
+/* сделать хедер видимым всегда */
+body .header{
+  opacity:1!important;
+  transform:translate(-50%,0)!important;
+}
+
+/* контейнер страницы туров */
+.tours-page{
+  padding:140px 40px 60px;
+  color:#e7f2ec;
+  font-family:"Montserrat",system-ui,sans-serif;
+}
+.tours-inner{
+  max-width:1400px;
+  margin:0 auto;
+}
+.tours-title{
+  font:700 3rem "Inika",serif;
+  color:#29c770;
+  margin-bottom:30px;
+  text-shadow:0 0 10px rgba(41,199,112,.25);
+}
+.tours-list{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+/* одна большая горизонтальная карточка */
+.tour-row{
+  display:grid;
+  grid-template-columns:240px 1fr 160px;
+  background:rgba(11,15,13,.75);
+  border:1px solid rgba(41,199,112,.15);
+  border-radius:20px;
+  box-shadow:0 6px 22px rgba(0,0,0,.35);
+  overflow:hidden;
+  transition:.3s;
+}
+.tour-row:hover{
+  transform:translateY(-3px);
+  border-color:rgba(41,199,112,.35);
+  background:rgba(11,15,13,.82);
+}
+
+.tour-row img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.85);
+  transition:.3s;
+}
+.tour-row:hover img{
+  filter:brightness(1);
+}
+
+.tour-row .info{
+  padding:22px 26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.tour-row h3{
+  font:700 1.35rem "Inika",serif;
+  margin:0 0 8px;
+  color:#29c770;
+}
+.tour-row p{
+  margin:0;
+  font-size:.95rem;
+  line-height:1.5;
+  color:rgba(231,242,236,.85);
+}
+
+/* маршрут под заголовком */
+.tour-route{
+  margin:0 0 8px;
+  font-size:.9rem;
+  line-height:1.4;
+  color:rgba(231,242,236,.75);
+  font-style:italic;
+}
+.tour-desc{
+  font-size:.95rem;
+  line-height:1.55;
+}
+
+/* правая колонка: цена + кнопка */
+.tour-row .side{
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:right;
+  gap:12px;
+}
+.price{
+  margin:0;
+  font-size:1.6rem;
+  color:#e7f2ec;
+}
+
+/* кнопка */
+.book-btn{
+  background:rgba(11,15,13,.6);
+  border:2px solid rgba(41,199,112,.5);
+  padding:10px 28px;
+  border-radius:30px;
+  color:#e7f2ec;
+  font:600 .9rem "Montserrat",system-ui,sans-serif;
+  backdrop-filter:blur(15px);
+  cursor:pointer;
+  transition:.3s ease;
+}
+.book-btn:hover{
+  color:#29c770;
+  border-color:#29c770;
+}
+.full-width{
+  width:100%;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);
+  z-index:9999;
+}
+.modal.active{
+  display:flex;
+}
+.modal-content{
+  background:rgba(11,15,13,.9);
+  border:1px solid rgba(41,199,112,.25);
+  padding:30px;
+  width:380px;
+  border-radius:22px;
+  font-family:"Montserrat",system-ui,sans-serif;
+  color:#e7f2ec;
+  position:relative;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.modal-content input,
+.modal-content textarea{
+  width:100%;
+  padding:11px 12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(41,199,112,.25);
+  color:#fff;
+  margin-bottom:14px;
+}
+.modal-content textarea{
+  height:80px;
+  resize:none;
+}
+.close{
+  position:absolute;
+  right:18px;
+  top:10px;
+  font-size:26px;
+  cursor:pointer;
+}
