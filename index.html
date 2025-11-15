@@ -24,11 +24,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicon/180x180.png" />
 
     <title>Clovertour</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("xmwXnjygvIIQeJCkD");
+        })();
+    </script>
+
 </head>
 
 <body>
     <!-- Loader -->
-    <div id="pageloader"><div class="clover"><i></i></div></div>
+    <div id="pageloader">
+        <div class="clover"><i></i></div>
+    </div>
 
     <!-- Background -->
     <div class="webback">
@@ -88,7 +98,8 @@
                         <img src="img/tours/cork.jpg" alt="Cork & Titanic Experience" loading="lazy">
                         <div class="info">
                             <h3 data-i18n="tour_cork_title">Cork & Titanic</h3>
-                            <p data-i18n="tour_cork_desc">Walk through history — from Elizabeth Fort to the Titanic Museum.</p>
+                            <p data-i18n="tour_cork_desc">Walk through history — from Elizabeth Fort to the Titanic
+                                Museum.</p>
                         </div>
                     </div>
 
@@ -211,4 +222,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
