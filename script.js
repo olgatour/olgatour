@@ -113,7 +113,7 @@ const i18n = {
     form_send: "Send",
 
     /* TOURS PAGE (tours.html) */
-    tours_page_title: "All Tours",
+    tours_page_title: "TOURS",
     btn_book: "Book",
     modal_booking_default: "Booking",
     modal_booking_prefix: "Booking: ",
@@ -190,7 +190,7 @@ const i18n = {
     form_send: "Отправить",
 
     /* TOURS PAGE */
-    tours_page_title: "Все туры",
+    tours_page_title: "ТУРЫ",
     btn_book: "Забронировать",
     modal_booking_default: "Бронирование",
     modal_booking_prefix: "Бронирование: ",
@@ -242,12 +242,12 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-      } else {
-        entry.target.classList.remove("visible");
+        observer.unobserve(entry.target); // <<< главный фикс
       }
     });
   }, {
-    threshold: 0.15
+    threshold: 0.2,
+    rootMargin: "0px 0px -5% 0px" // стабилизирует поведение у верхнего края
   });
 
   fadeItems.forEach(el => observer.observe(el));
@@ -295,5 +295,28 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("active");
       form.reset();
     });
+  }
+});
+document.getElementById("form")?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const msg = document.getElementById("msg").value;
+
+  const status = document.getElementById("formStatus");
+  status.textContent = "Sending...";
+
+  try {
+    await emailjs.send("service_lrt056z", "template_hfr2pre", {
+      name,
+      email,
+      msg
+    });
+
+    status.textContent = "Message sent!";
+    e.target.reset();
+  } catch (err) {
+    status.textContent = "Error sending message";
   }
 });

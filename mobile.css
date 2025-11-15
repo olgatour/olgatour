@@ -32,6 +32,13 @@
   .tour-card:hover{transform:none!important;border-color:rgba(41,199,112,.15)!important}
   .tour-card:hover img{filter:brightness(.85)!important}
 }
+@media (max-width: 768px) {
+  .fade-item {
+    transform: translateY(20px) scale(.96);
+    filter: blur(1.5px);
+    transition: opacity .5s ease-out, transform .5s ease-out, filter .5s ease-out;
+  }
+}
 
 .tour-card{
   border-radius:16px;
@@ -194,26 +201,14 @@
     text-align:center!important;
   }
 
-  /* Блок цена + кнопка — вниз */
-  .tour-row .side{
-    width:100%;
-    padding:16px 20px!important;
-    text-align:center!important;
-    display:flex!important;
-    align-items:center!important;
-  }
+  @media(max-width:768px){
+  .tour-row .side{width:100%;padding:16px 20px!important;text-align:center!important;display:flex!important;align-items:center!important;gap:0!important}
+  .tour-row .side .price{transform:none!important}
+  .tour-row .side .book-btn{transform:none!important}
+  .price{font-size:1.4rem!important}
+  .book-btn{width:100%!important;max-width:280px!important;margin:0 auto!important}
+}}
 
-  .price{
-    font-size:1.4rem!important;
-  }
-
-  /* Кнопка */
-  .book-btn{
-    width:100%!important;
-    max-width:280px!important;
-    margin:0 auto!important;
-  }
-}
 
 /* ----- До 480px: выводим всё максимально крупно и удобно ----- */
 @media (max-width:480px){
