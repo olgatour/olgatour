@@ -283,7 +283,7 @@ body.ready .button1{animation:rise .8s ease .8s both}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-/* WHY CLOVERTOUR */
+/* WHY OLGATOURS */
 .why-section{position:relative;padding:80px 40px;background:none;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif}
 .why-inner{max-width:1200px;margin:0 auto;text-align:center}
 .why-title{font:700 clamp(2.2rem,5vw,3rem) "Inika";color:#29c770;margin-bottom:50px;text-shadow:0 0 10px rgba(41,199,112,.25);text-align:left}

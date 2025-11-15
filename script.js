@@ -81,7 +81,7 @@ const i18n = {
     btn_viewall: "View All Tours",
 
     /* WHY SECTION */
-    why_title: "WHY CLOVERTOUR",
+    why_title: "WHY OLGATOURS",
     why_1_title: "🌿 Authentic Experience",
     why_1_desc: "We don’t just offer tours — we share real Irish stories.",
     why_2_title: "🚐 Small Groups",
@@ -93,7 +93,7 @@ const i18n = {
 
     /* ABOUT */
     about_title: "ABOUT US",
-    about_text: "Clovertour was created to make discovering Ireland simple, beautiful, and meaningful.",
+    about_text: "Olgatour was created to make discovering Ireland simple, beautiful, and meaningful.",
     about_fact1: "Eco-friendly routes",
     about_fact2: "Supporting local places",
     about_fact3: "Modern design",
@@ -158,7 +158,7 @@ const i18n = {
     btn_viewall: "Все туры",
 
     /* WHY SECTION */
-    why_title: "ПОЧЕМУ CLOVERTOUR",
+    why_title: "ПОЧЕМУ OLGATOUR",
     why_1_title: "🌿 Настоящие впечатления",
     why_1_desc: "Мы не просто предлагаем туры — мы делимся ирландскими историями.",
     why_2_title: "🚐 Маленькие группы",
@@ -170,7 +170,7 @@ const i18n = {
 
     /* ABOUT */
     about_title: "О НАС",
-    about_text: "Clovertour создан, чтобы сделать путешествия по Ирландии простыми, красивыми и осознанными.",
+    about_text: "Olgatour создан, чтобы сделать путешествия по Ирландии простыми, красивыми и осознанными.",
     about_fact1: "Экологичные маршруты",
     about_fact2: "Поддержка локальных мест",
     about_fact3: "Современный дизайн",
