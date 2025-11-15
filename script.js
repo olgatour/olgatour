@@ -259,44 +259,6 @@ document.getElementById("button1")?.addEventListener("click", () => {
   if (target) target.scrollIntoView({ behavior: "smooth" });
 });
 
-
-// ==== TOURS MODAL (tours.html) ====
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("bookingModal");
-  if (!modal) return;
-
-  const modalClose = document.getElementById("modalClose");
-  const modalTitle = document.getElementById("modalTourName");
-  const form = document.getElementById("bookingForm");
-
-  const currentLang = (localStorage.getItem("lang") || "en");
-  const prefix = (i18n[currentLang] && i18n[currentLang].modal_booking_prefix) || "Booking: ";
-
-  document.querySelectorAll(".book-btn[data-tour]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const name = btn.dataset.tour || "";
-      modalTitle.textContent = prefix + name;
-      modal.classList.add("active");
-    });
-  });
-
-  if (modalClose) {
-    modalClose.addEventListener("click", () => modal.classList.remove("active"));
-  }
-
-  window.addEventListener("click", e => {
-    if (e.target === modal) modal.classList.remove("active");
-  });
-
-  if (form) {
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Request sent!");
-      modal.classList.remove("active");
-      form.reset();
-    });
-  }
-});
 document.getElementById("form")?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -319,4 +281,61 @@ document.getElementById("form")?.addEventListener("submit", async (e) => {
   } catch (err) {
     status.textContent = "Error sending message";
   }
+});
+// === BOOKING FORM (modal) ===
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("bookingModal");
+    if (!modal) return;
+
+    const modalClose = document.getElementById("modalClose");
+    const modalTitle = document.getElementById("modalTourName");
+    const form = document.getElementById("bookingForm");
+
+    // --- Открытие модалки с названием тура ---
+    document.querySelectorAll(".book-btn[data-tour]").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const tourName = btn.dataset.tour || "";
+            modalTitle.textContent = "Booking: " + tourName;
+            modal.dataset.tour = tourName; // сохраняем тур внутрь модалки
+            modal.classList.add("active");
+        });
+    });
+
+    // --- Закрытие модалки ---
+    modalClose?.addEventListener("click", () => modal.classList.remove("active"));
+    window.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.remove("active");
+    });
+
+    // --- Отправка формы ---
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const inputs = form.querySelectorAll("input, textarea");
+        const name = inputs[0].value;
+        const email = inputs[1].value;
+        const phone = inputs[2].value;
+        const message = inputs[3].value;
+        const tour = modal.dataset.tour || "Unknown Tour";
+        const time = new Date().toLocaleString();
+
+        try {
+            await emailjs.send("service_lrt056z", "template_84o57hf", {
+                name,
+                email,
+                phone,
+                message,
+                tour,
+                time
+            });
+
+            alert("Booking request sent!");
+            form.reset();
+            modal.classList.remove("active");
+
+        } catch (err) {
+            console.error(err);
+            alert("Error sending booking request");
+        }
+    });
 });
