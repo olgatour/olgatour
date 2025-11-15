@@ -1,4 +1,12 @@
 @media(max-width:768px){
+  .fade-item{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+}
+
+@media(max-width:768px){
   .burger{display:flex}
   .menu{
     position:fixed;left:50%;top:500%;transform:translate(-50%,150%);
