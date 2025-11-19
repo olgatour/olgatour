@@ -79,7 +79,6 @@
 }
 
 /*============ TOURS PAGE ============*/
-@media(max-width:1100px){.tour-row{grid-template-columns:200px 1fr 150px}}
 @media(max-width:900px){
 .tour-row{grid-template-columns:180px 1fr 130px}
 .tour-row .info{padding:18px 20px}

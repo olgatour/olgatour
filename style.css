@@ -365,7 +365,7 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .tour-tag{position:absolute;top:12px;left:12px;padding:6px 12px;font-size:.75rem;border-radius:14px;background:rgba(41,199,112,.35);color:#e7f2ec;font-weight:600;backdrop-filter:blur(8px)}
 /* TEXT */
 .tour-info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
-.tour-info h3{margin:0;font-family:"Inika",serif;font-weight:700;font-size:3rem;color:#29c770}
+.tour-info h3{margin:0;font-family:"Inika",serif;font-weight:700;font-size:1rem;color:#29c770}
 /* DESCRIPTION */
 .tour-short{margin:0;color:rgba(231,242,236,.85);font-size:.9rem;line-height:1.5}
 /* RATING */

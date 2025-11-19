@@ -139,7 +139,7 @@ const i18n = {
     tour_cork_full_title: "Cork and Titanic experience",
     tour_cork_full_desc: "Discover the Cork and Titanic Heritage Tour. Step into the rich history of Cork on this captivating journey. Begin with a Cork walking tour, exploring charming streets, Elizabeth Fort and learning about the fascinating origins of this great city. Experience the lively atmosphere of the English Market, a food lover’s paradise. Continue to the picturesque town of Cobh, home to the famous Titanic Museum, where the final chapter of the great ship’s story unfolds. Visit Ireland’s highest cathedral, a stunning masterpiece overlooking the harbor. On the way, enjoy the scenic charm of D. Kennedy’s town, filled with coastal beauty and local character.",
 
-    tour_connemara_title: "Connemara National Park & Kylemore Abbey",
+    tour_connemara_title: "Connemara & Kylemore Abbey",
     tour_connemara_full_desc: "Connemara National Park & Kylemore Abbey Tour. Immerse yourself in the wild beauty of Connemara National Park, where sweeping mountains, shimmering lakes and vast boglands create some of Ireland’s most breathtaking landscapes. Enjoy scenic trails and panoramic views that capture the essence of the west. Then, step into the fairytale setting of Kylemore Abbey, a stunning 19th-century castle nestled on the shores of a tranquil lake. Discover its romantic history, stroll through the Victorian Walled Garden and feel the peaceful atmosphere of this remarkable place. This journey blends natural wonders with cultural heritage for an unforgettable Irish experience.",
 
     tour_dingle_full_title: "Dingle peninsula",
@@ -236,7 +236,7 @@ const i18n = {
     tour_cork_full_title: "Cork and Titanic experience",
     tour_cork_full_desc: "Откройте для себя тур Cork and Titanic Heritage. Погрузитесь в историю Корка во время увлекательной прогулки по городу, его улочкам и крепости Elizabeth Fort, узнавая о происхождении этого места. Почувствуйте атмосферу легендарного рынка English Market — рая для гурманов. Затем отправьтесь в живописный городок Коуб, где находится знаменитый музей Титаника, завершающий историю великого лайнера. Посетите самый высокий собор Ирландии с видом на гавань и по дороге насладитесь колоритом городка Д. Кеннеди с его прибрежной красотой и местным характером.",
 
-    tour_connemara_title: "Connemara National Park & Kylemore Abbey",
+    tour_connemara_title: "Connemara & Kylemore Abbey",
     tour_connemara_full_desc: "Тур Connemara National Park & Kylemore Abbey. Окунитесь в дикую красоту национального парка Коннемара, где горы, озёра и торфяники создают одни из самых впечатляющих пейзажей Ирландии. Насладитесь прогулками по тропам и панорамными видами Атлантики. Затем отправьтесь в сказочное аббатство Кайломор — замок XIX века на берегу спокойного озера. Узнайте его романтичную историю, прогуляйтесь по викторианскому саду и ощутите умиротворённую атмосферу этого места. Это путешествие объединяет природу и культуру, даря незабываемые впечатления.",
 
     tour_dingle_full_title: "Dingle peninsula",
