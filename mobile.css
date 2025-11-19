@@ -1,5 +1,7 @@
+/*============ FADE MOBILE ============*/
 @media(max-width:768px){.fade-item{opacity:1!important;transform:none!important;filter:none!important}}
 
+/*============ MENU MOBILE ============*/
 @media(max-width:768px){
 .burger{display:flex}
 .menu{position:fixed;left:50%;top:500%;transform:translate(-50%,150%);flex-direction:column;justify-content:center;align-items:center;gap:22px;width:clamp(280px,90%,600px);padding:40px 20px;background:rgba(11,15,13,.85);border:1px solid rgba(41,199,112,.15);border-radius:30px;backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .4s ease}
@@ -18,6 +20,7 @@
 .button1 button:hover{border-color:rgba(41,199,112,.5)!important;color:#e7f2ec!important;transform:none!important}
 }
 
+/*============ TOURS BASE ============*/
 @media(max-width:1000px){
 .tours-layout{grid-template-columns:1fr}
 .side-tours{flex-direction:row;gap:20px}
@@ -42,19 +45,20 @@
 .tour-card.big h3{font-size:1.35rem}
 .tour-card.big .desc{font-size:.9rem;line-height:1.45;max-width:520px}
 
+/*============ WHY SECTION ============*/
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .why-card{background:rgba(11,15,13,.45);border:2px solid rgba(41,199,112,.12);border-radius:16px;padding:20px 18px;backdrop-filter:blur(6px);box-shadow:0 0 10px rgba(0,0,0,.2)}
 .why-card h3{font:600 1.1rem "Montserrat";color:#29c770;margin-bottom:8px}
 .why-card p{color:#cdd8d3;font-size:.85rem;line-height:1.45}
 
+/*============ CONTACTS ============*/
 @media(max-width:900px){
 .contacts-grid{grid-template-columns:1fr;gap:20px}
 .contacts-form,.contacts-info{grid-column:span 1}
 }
 
 @media(max-width:768px){
-.why-title{text-align:center!important}
-.contacts-title{text-align:center!important}
+.why-title,.contacts-title{text-align:center!important}
 .contacts-section{padding:35px 20px!important}
 .contacts-grid{grid-template-columns:1fr!important;gap:18px!important}
 .contacts-form,.contacts-info{padding:16px!important}
@@ -63,6 +67,7 @@
 .why-grid{grid-template-columns:1fr!important;gap:20px!important}
 }
 
+/*============ ABOUT ============*/
 @media(max-width:900px){
 .about-hero-split{grid-template-columns:1fr}
 .about-right{height:350px;margin-top:20px}
@@ -72,14 +77,9 @@
 .mini-row{grid-template-columns:1fr 1fr;gap:16px}
 .mini-feature{font-size:1rem;padding:14px}
 }
-/* ============================= */
-/*        TOURS PAGE MOBILE      */
-/* ============================= */
 
-@media(max-width:1100px){
-.tour-row{grid-template-columns:200px 1fr 150px}
-}
-
+/*============ TOURS PAGE ============*/
+@media(max-width:1100px){.tour-row{grid-template-columns:200px 1fr 150px}}
 @media(max-width:900px){
 .tour-row{grid-template-columns:180px 1fr 130px}
 .tour-row .info{padding:18px 20px}
@@ -88,29 +88,24 @@
 .tour-desc{font-size:.9rem}
 }
 
-/* --- 768px old system (вертикальные большие карточки) --- */
 @media(max-width:768px){
 .tours-page{padding:120px 20px 40px!important}
 .tours-title{text-align:center!important;font-size:2.2rem!important;margin-bottom:22px!important}
 .tours-list{gap:22px!important}
-.tour-row{display:flex!important;flex-direction:column!important;grid-template-columns:none!important;padding:0!important;border-radius:18px!important}
+.tour-row{display:flex!important;flex-direction:column!important;padding:0!important;border-radius:18px!important}
 .tour-row img{width:100%;height:220px!important;object-fit:cover}
 .tour-row .info{padding:18px 20px!important}
 .tour-row h3{font-size:1.3rem!important;margin-bottom:6px!important;text-align:center!important}
-.tour-route{text-align:center!important;margin-bottom:10px!important}
-.tour-desc{text-align:center!important}
+.tour-route,.tour-desc{text-align:center!important}
 }
 
-/* SIDE */
+/*============ TOURS PRICE/BUTTON ============*/
 @media(max-width:768px){
-.tour-row .side{width:100%;padding:16px 20px!important;text-align:center!important;display:flex!important;align-items:center!important;gap:0!important}
-.tour-row .side .price{transform:none!important}
-.tour-row .side .book-btn{transform:none!important}
+.tour-row .side{width:100%;padding:16px 20px!important;text-align:center!important;display:flex!important;align-items:center!important}
 .price{font-size:1.4rem!important}
 .book-btn{width:100%!important;max-width:280px!important;margin:0 auto!important}
 }
 
-/* ----- До 480px: всё крупнее ----- */
 @media(max-width:480px){
 .tours-title{font-size:1.9rem!important}
 .tour-row img{height:190px!important}
@@ -124,54 +119,39 @@
 .close{top:6px!important;right:14px!important}
 }
 
-/* ======================================= */
-/*        НОВАЯ СЕТКА 4→1 КОЛОНКА          */
-/* ======================================= */
+/*============ GRID 4→1 ============*/
 @media(max-width:768px){
 .tours-grid{grid-template-columns:1fr!important;gap:20px!important}
 .tour-img{height:200px!important}
 }
+
 @media(max-width:768px){
-  .tour-bottom{
-    flex-direction:column!important;
-    align-items:center!important;
-    gap:10px!important;
-  }
-
-  .tour-price{
-    margin-bottom:4px!important;
-  }
-
-  .book-btn.small{
-    width:100%!important;
-    max-width:260px!important;
-  }
+.tour-bottom{flex-direction:column!important;align-items:center!important;gap:10px!important}
+.tour-price{margin-bottom:4px!important}
+.book-btn.small{width:100%!important;max-width:260px!important}
 }
+
 @media(max-width:768px){
+.tours-layout{display:flex;flex-direction:column;gap:28px}
+.tour-card.big{height:auto}
+.side-tours{display:flex;flex-direction:column;gap:22px}
+.tour-card.small{aspect-ratio:unset;height:320px}
+.tour-card.small img{height:60%}
+}
 
-  .tours-layout{
-    display:flex;
-    flex-direction:column;
-    gap:28px;
-  }
+/*============ PROMO CARD ============*/
+@media(max-width:768px){
+.promo-card{width:100%!important;max-width:92%!important;margin:0 auto 30px auto!important;border-radius:22px!important}
+.promo-img{height:220px!important}
+.promo-info{padding:20px 20px 40px!important;display:block!important}
+.promo-left h3{font-size:2.4rem!important;margin:0 0 10px 0!important;text-align:left!important}
+.promo-desc{font-size:.9rem!important;line-height:1.5!important;text-align:left!important}
+.promo-right{width:100%!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;margin-top:25px!important;gap:12px!important}
+.promo-price-box{text-align:center!important;margin:10px 0 0 0!important;width:100%!important}
+.promo-book-btn{width:100%!important;max-width:260px!important;margin:0 auto!important}
+.promo-tag{margin-left:20px!important}
+}
 
-  .tour-card.big{
-    height:auto;
-  }
-
-  .side-tours{
-    display:flex;
-    flex-direction:column;
-    gap:22px;
-  }
-
-  /* small cards on mobile = rectangle, not giant tall sticks */
-  .tour-card.small{
-    aspect-ratio:unset;
-    height:320px;
-  }
-
-  .tour-card.small img{
-    height:60%;
-  }
+@media(max-width:768px){
+.promo-right{min-height:unset!important}
 }

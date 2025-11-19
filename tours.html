@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
 
-    <!-- Favicons (как на index.html, если есть) -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon/32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon/16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicon/180x180.png" />
@@ -26,27 +25,22 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        emailjs.init({
-            publicKey: "xmwXnjygvIIQeJCkD"
-        });
+        emailjs.init({ publicKey: "xmwXnjygvIIQeJCkD" });
     </script>
-
 </head>
 
 <body>
-    <!-- Loader (тот же, что на index.html) -->
     <div id="pageloader">
         <div class="clover"><i></i></div>
     </div>
 
-    <!-- Background -->
     <div class="webback">
         <img class="webback" src="img/back/webback.webp" alt="Background Image">
     </div>
 
     <!-- HEADER -->
     <header class="header">
-        <a href="index.html#home" class="logo">Olgatour</a>
+        <a href="index.html#home" class="logo" data-i18n="logo">Olgatour</a>
 
         <button class="burger" id="burger" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -63,7 +57,7 @@
     <!-- TOURS PAGE -->
     <section class="tours-page fade-item">
         <div class="tours-inner">
-            <h1 class="tours-title" data-i18n="tours_page_title">TOURS</h1>
+            <h1 class="tours-title" data-i18n="tours_page_title">POPULAR TOURS</h1>
 
             <div class="tours-grid">
 
@@ -71,20 +65,18 @@
                 <div class="tour-card fade-item">
                     <div class="tour-img">
                         <img src="img/tours/killarney.jpg" alt="Killarney">
-                        <span class="tour-tag">3 nights tour</span>
+                        <span class="tour-tag" data-i18n="tag_3nights">3 nights tour</span>
                     </div>
 
                     <div class="tour-info">
-
-                        <!-- RATING -->
                         <div class="tour-rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-number">4.7 / 5</span>
                         </div>
 
-                        <h3 class="tour-card-title">Killarney</h3>
+                        <h3 class="tour-card-title" data-i18n="tour_killarney_title">Killarney</h3>
 
-                        <p class="tour-short">
+                        <p class="tour-short" data-i18n="tour_killarney_route">
                             Ring of Kerry • Ross Castle • Old Abbey • Muckross House • National Park
                         </p>
 
@@ -93,30 +85,27 @@
                                 <span class="old-price">€600</span>
                                 <span class="tour-price">€399</span>
                             </div>
-                            <button class="book-btn small" data-tour="Killarney">Book</button>
+                            <button class="book-btn small" data-tour="Killarney" data-i18n="btn_book">Book</button>
                         </div>
                     </div>
                 </div>
-
 
                 <!-- CARD 2 -->
                 <div class="tour-card fade-item">
                     <div class="tour-img">
                         <img src="img/tours/cork.jpg" alt="Cork & Titanic experience">
-                        <span class="tour-tag">Walking Tour</span>
+                        <span class="tour-tag" data-i18n="tag_walking">Walking Tour</span>
                     </div>
 
                     <div class="tour-info">
-
-                        <!-- RATING -->
                         <div class="tour-rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-number">4.6 / 5</span>
                         </div>
 
-                        <h3 class="tour-card-title">Cork & Titanic Experience</h3>
+                        <h3 class="tour-card-title" data-i18n="tour_cork_title">Cork & Titanic Experience</h3>
 
-                        <p class="tour-short">
+                        <p class="tour-short" data-i18n="tour_cork_route">
                             Elizabeth Fort • English Market • Cobh • Titanic Museum • Cathedral
                         </p>
 
@@ -125,30 +114,27 @@
                                 <span class="old-price">€530</span>
                                 <span class="tour-price">€349</span>
                             </div>
-                            <button class="book-btn small" data-tour="Cork">Book</button>
+                            <button class="book-btn small" data-tour="Cork" data-i18n="btn_book">Book</button>
                         </div>
                     </div>
                 </div>
-
 
                 <!-- CARD 3 -->
                 <div class="tour-card fade-item">
                     <div class="tour-img">
                         <img src="img/tours/connemara.jpg" alt="Connemara National Park">
-                        <span class="tour-tag">Nature</span>
+                        <span class="tour-tag" data-i18n="tag_nature">Nature</span>
                     </div>
 
                     <div class="tour-info">
-
-                        <!-- RATING -->
                         <div class="tour-rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-number">4.8 / 5</span>
                         </div>
 
-                        <h3 class="tour-card-title">Connemara & Kylemore Abbey</h3>
+                        <h3 class="tour-card-title" data-i18n="tour_connemara_title">Connemara & Kylemore Abbey</h3>
 
-                        <p class="tour-short">
+                        <p class="tour-short" data-i18n="tour_connemara_route">
                             National Park • Scenic views • Kylemore Abbey • Walled Garden
                         </p>
 
@@ -157,30 +143,27 @@
                                 <span class="old-price">€650</span>
                                 <span class="tour-price">€599</span>
                             </div>
-                            <button class="book-btn small" data-tour="Connemara">Book</button>
+                            <button class="book-btn small" data-tour="Connemara" data-i18n="btn_book">Book</button>
                         </div>
                     </div>
                 </div>
-
 
                 <!-- CARD 4 -->
                 <div class="tour-card fade-item">
                     <div class="tour-img">
                         <img src="img/tours/dingle.jpg" alt="Dingle peninsula">
-                        <span class="tour-tag">Coastal</span>
+                        <span class="tour-tag" data-i18n="tag_coastal">Coastal</span>
                     </div>
 
                     <div class="tour-info">
-
-                        <!-- RATING -->
                         <div class="tour-rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-number">4.5 / 5</span>
                         </div>
 
-                        <h3 class="tour-card-title">Dingle Peninsula</h3>
+                        <h3 class="tour-card-title" data-i18n="tour_dingle_title">Dingle Peninsula</h3>
 
-                        <p class="tour-short">
+                        <p class="tour-short" data-i18n="tour_dingle_route">
                             Slea Head • Dingle Bay • Oratory • Blasket Islands • Coastline
                         </p>
 
@@ -189,7 +172,7 @@
                                 <span class="old-price">€700</span>
                                 <span class="tour-price">€559</span>
                             </div>
-                            <button class="book-btn small" data-tour="Dingle">Book</button>
+                            <button class="book-btn small" data-tour="Dingle" data-i18n="btn_book">Book</button>
                         </div>
                     </div>
                 </div>
@@ -205,20 +188,68 @@
             <h2 id="modalTourName" data-i18n="modal_booking_default">Booking</h2>
 
             <form class="modal-form" id="bookingForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <textarea placeholder="Message..."></textarea>
+                <input type="text" placeholder="Full Name" data-i18n-ph="form_name_ph" required>
+                <input type="email" placeholder="Email" data-i18n-ph="form_email_ph" required>
+                <input type="tel" placeholder="Phone Number" data-i18n-ph="form_phone_ph" required>
+                <textarea placeholder="Message..." data-i18n-ph="form_message_ph"></textarea>
 
                 <button type="submit" class="book-btn full-width" data-i18n="form_send">Send</button>
             </form>
         </div>
     </div>
 
+    <!-- PROMO -->
+    <section class="promo-wrapper">
+        <h1 class="tours-title" data-i18n="promo_special_offer">SPECIAL OFFER OF THE MONTH</h1>
+
+        <div class="promo-card tour-card">
+            <div class="promo-img tour-img">
+                <img src="img/tours/killarney-b.jpg" alt="Killarney Promo">
+                <span class="promo-tag tour-tag" data-i18n="promo_special_tag">Special offer — 3 nights</span>
+            </div>
+
+            <div class="marquee">
+                <div class="marquee-track" id="marqueeTrack">
+                    <span class="marquee-item" data-i18n="promo_marquee">Sale of the month — 20% OFF — Limited Offer —
+                    </span>
+                </div>
+            </div>
+
+            <div class="promo-info">
+                <div class="promo-left">
+                    <div class="tour-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.7 / 5</span>
+                    </div>
+
+                    <h3 data-i18n="tour_killarney_title">Killarney</h3>
+
+                    <p class="promo-desc" data-i18n="promo_killarney_desc">
+                        Killarney County Kerry. At the beginning of our journey you will hear
+                        the secrets and legends of the Shannon River Bay.</br>We will visit an
+                        incredible and mysterious place – Ross Castle...
+                        <br><br>
+                        The journey will be “seasoned” with real ancient Irish legends.
+                    </p>
+
+                </div>
+
+                <div class="promo-right">
+                    <div class="price-box promo-price-box">
+                        <span class="old-price">€600</span>
+                        <span class="tour-price">€399</span>
+                    </div>
+
+                    <button class="book-btn small" data-tour="Killarney" data-i18n="btn_book">Book</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
-            <a href="index.html#home" class="footer-logo">Olgatours</a>
+            <a href="index.html#home" class="footer-logo" data-i18n="logo">Olgatours</a>
 
             <nav class="footer-menu">
                 <a href="index.html#home" data-i18n="nav_home">Home</a>
@@ -227,7 +258,7 @@
                 <a href="index.html#contacts" data-i18n="nav_contact">Contacts</a>
             </nav>
 
-            <p class="copy">© Olgatour, 2025</p>
+            <p class="copy" data-i18n="copy">© Olgatour, 2025</p>
         </div>
     </footer>
 
