@@ -1,290 +1,64 @@
-/* ==== Base ==== */
-:where(*,*::before,*::after){box-sizing:border-box;user-select:none;-webkit-user-select:none;-webkit-user-drag:none}
-:where(input,textarea){user-select:text;-webkit-user-select:text}
-html,body{margin:0;padding:0;height:100%;font-size:16px;overflow-x:hidden;scrollbar-width:none;scroll-behavior:smooth}
-:where(html,body)::-webkit-scrollbar{width:0;height:0}
-body{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+/* ========================= GLOBAL STYLES ========================= */
+:where(*,*::before,*::after){box-sizing:border-box;user-select:none;-webkit-user-select:none;-webkit-user-drag:none}:where(input,textarea){user-select:text;-webkit-user-select:text}html,body{margin:0;padding:0;height:100%;font-size:16px;overflow-x:hidden;scrollbar-width:none;scroll-behavior:smooth}:where(html,body)::-webkit-scrollbar{width:0;height:0}body{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
 
-/* ==== Fade In ==== */
-.fade-item {
-  opacity: 0;
-  transform: translateY(40px) scale(.92);
-  filter: blur(3px);
-  transition: opacity .9s ease-out, transform .9s ease-out, filter .9s ease-out;
-  will-change: opacity, transform, filter;
-}
+/* ========================= FADE ITEMS ========================= */
+.fade-item{opacity:0;transform:translateY(40px) scale(.92);filter:blur(3px);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.25,.1,.25,1),filter .9s ease;will-change:opacity,transform,filter}.fade-item.visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 
-.fade-item.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-/* ==== Background ==== */
+/* ========================= BACKGROUND ========================= */
 .webback{position:fixed;inset:0;width:100%;height:100%;background:center/cover no-repeat;z-index:-1}
 
-/* ==== Loader ==== */
-#pageloader{
-  position:fixed;inset:0;z-index:9999;display:grid;place-items:center;
-  background:radial-gradient(120% 80% at 50% 0%,#0b0f0d 20%,#0d1512 70%,#0b0f0d 100%);
-  opacity:1;visibility:visible;transition:opacity .6s ease,visibility .6s ease
-}
-#pageloader.hide{opacity:0;visibility:hidden}
-html.lock,body.lock{overflow:hidden}
+/* ========================= LOADER ========================= */
+#pageloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(120% 80% at 50% 0%,#0b0f0d 20%,#0d1512 70%,#0b0f0d 100%);opacity:1;visibility:visible;transition:opacity .6s ease,visibility .6s ease}#pageloader.hide{opacity:0;visibility:hidden}html.lock,body.lock{overflow:hidden}
+.clover{width:64px;height:64px;position:relative;animation:spin 1.6s linear infinite;background:radial-gradient(closest-side,#29c770 98%,transparent)0 0/50% 50% no-repeat,radial-gradient(closest-side,#29c770 98%,transparent)100% 0/50% 50% no-repeat,radial-gradient(closest-side,#29c770 98%,transparent)0 100%/50% 50% no-repeat,radial-gradient(closest-side,#29c770 98%,transparent)100% 100%/50% 50% no-repeat;border-radius:14px;filter:drop-shadow(0 6px 18px rgba(41,199,112,.35))}.clover i{position:absolute;inset:0;margin:auto;width:18px;height:18px;transform:rotate(45deg);background:#e7f2ec;border-radius:4px;box-shadow:0 0 0 2px #103c2a inset}.clover::after{content:"";position:absolute;inset:-12px;border-radius:16px;mask:radial-gradient(circle at 50% 50%,transparent 34px,#000 34.5px);background:conic-gradient(from 0turn,#36e088 0 25%,#1ea55f 0 50%,#36e088 0 75%,#1ea55f 0 100%);animation:dash 1.2s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes dash{0%{transform:rotate(0)scale(.9);opacity:.6}50%{transform:rotate(90deg)scale(1);opacity:1}100%{transform:rotate(180deg)scale(.9);opacity:.6}}
 
-/* ==== Clover Spinner ==== */
-.clover{
-  width:64px;height:64px;position:relative;animation:spin 1.6s linear infinite;
-  background:
-    radial-gradient(closest-side,#29c770 98%,transparent)0 0/50% 50% no-repeat,
-    radial-gradient(closest-side,#29c770 98%,transparent)100% 0/50% 50% no-repeat,
-    radial-gradient(closest-side,#29c770 98%,transparent)0 100%/50% 50% no-repeat,
-    radial-gradient(closest-side,#29c770 98%,transparent)100% 100%/50% 50% no-repeat;
-  border-radius:14px;filter:drop-shadow(0 6px 18px rgba(41,199,112,.35))
-}
-.clover i{
-  position:absolute;inset:0;margin:auto;width:18px;height:18px;
-  transform:rotate(45deg);background:#e7f2ec;border-radius:4px;
-  box-shadow:0 0 0 2px #103c2a inset
-}
-.clover::after{
-  content:"";position:absolute;inset:-12px;border-radius:16px;
-  mask:radial-gradient(circle at 50% 50%,transparent 34px,#000 34.5px);
-  background:conic-gradient(from 0turn,#36e088 0 25%,#1ea55f 0 50%,#36e088 0 75%,#1ea55f 0 100%);
-  animation:dash 1.2s ease-in-out infinite
-}
+/* ========================= HEADER ========================= */
+.header{position:fixed;top:20px;left:50%;transform:translate(-50%,-40px);width:clamp(300px,90%,1200px);height:60px;display:flex;align-items:center;justify-content:space-between;padding:10px 40px;background:rgba(11,15,13,.75);backdrop-filter:blur(15px);border:1px solid rgba(41,199,112,.15);border-radius:50px;box-shadow:0 6px 22px rgba(0,0,0,.35);color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;z-index:1000;opacity:0}body.ready .header{animation:slideIn .8s ease forwards .1s}@keyframes slideIn{0%{opacity:0;transform:translate(-50%,-40px)}100%{opacity:1;transform:translate(-50%,0)}}
+.logo{color:#29c770;font-size:1.2rem;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:opacity .3s}.logo:hover{opacity:.8}
+.menu{display:flex;align-items:center;gap:24px}.menu a{color:#e7f2ec;font-size:.95rem;text-decoration:none;transition:color .3s}.menu a:hover{color:#29c770}
+.language{position:relative;display:flex;align-items:center;justify-content:center;width:72px;height:32px;background:rgba(255,255,255,.05);border:1px solid rgba(41,199,112,.25);border-radius:20px;cursor:pointer;transition:.3s}.language::before{content:attr(data-lang);color:#e7f2ec;font-size:.9rem;font-weight:600;letter-spacing:.3px}.language:hover{border-color:#29c770;background:rgba(41,199,112,.1)}
+.burger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:none;border:0;cursor:pointer;z-index:1100}.burger span{display:block;width:100%;height:2px;background:#e7f2ec;border-radius:2px;transition:transform .35s cubic-bezier(.65,.05,.36,1),opacity .25s ease,background .3s ease;transform-origin:center}.burger.active span:nth-child(1){transform:translateY(9px) rotate(45deg)}.burger.active span:nth-child(2){transform:scaleX(0);opacity:0}.burger.active span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
 
-/* ==== Keyframes ==== */
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes dash{
-  0%{transform:rotate(0)scale(.9);opacity:.6}
-  50%{transform:rotate(90deg)scale(1);opacity:1}
-  100%{transform:rotate(180deg)scale(.9);opacity:.6}
-}
-
-/* ===== HEADER ===== */
-.header{
-  position:fixed;top:20px;left:50%;transform:translate(-50%,-40px);
-  width:clamp(300px,90%,1200px);height:60px;display:flex;align-items:center;
-  justify-content:space-between;padding:10px 40px;background:rgba(11,15,13,.75);
-  backdrop-filter:blur(15px);border:1px solid rgba(41,199,112,.15);
-  border-radius:50px;box-shadow:0 6px 22px rgba(0,0,0,.35);
-  color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;
-  z-index:1000;opacity:0;
-}
-body.ready .header{animation:slideIn .8s ease forwards .1s}
-@keyframes slideIn{0%{opacity:0;transform:translate(-50%,-40px)}100%{opacity:1;transform:translate(-50%,0)}}
-
-.logo{color:#29c770;font-size:1.2rem;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:opacity .3s ease}
-.logo:hover{opacity:.8}
-
-.menu{display:flex;align-items:center;gap:24px}
-.menu a{color:#e7f2ec;font-size:.95rem;text-decoration:none;transition:color .3s ease}
-.menu a:hover{color:#29c770}
-
-/* Language Toggle */
-.language{
-  position:relative;display:flex;align-items:center;justify-content:center;
-  width:72px;height:32px;background:rgba(255,255,255,.05);
-  border:1px solid rgba(41,199,112,.25);border-radius:20px;
-  cursor:pointer;transition:.3s ease
-}
-.language::before{
-  content:attr(data-lang);color:#e7f2ec;font-size:.9rem;font-weight:600;
-  letter-spacing:.3px;transition:.3s ease
-}
-.language:hover{border-color:#29c770;background:rgba(41,199,112,.1)}
-
-/* Burger */
-.burger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:none;border:0;cursor:pointer;z-index:1100}
-.burger span{display:block;width:100%;height:2px;background:#e7f2ec;border-radius:2px;transition:transform .35s cubic-bezier(.65,.05,.36,1),opacity .25s ease,background .3s ease;transform-origin:center}
-.burger.active span:nth-child(1){transform:translateY(9px) rotate(45deg)}
-.burger.active span:nth-child(2){transform:scaleX(0);opacity:0}
-.burger.active span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
-
-/* ==== PAGE 1 ==== */
-.page1{
-  position:relative;display:flex;align-items:center;justify-content:center;
-  height:100vh;background:none;color:#e7f2ec;overflow:hidden;text-align:left;margin-bottom: 0;
-}
-.page1-text{display:flex;flex-direction:column;width:100%;max-width:1400px;padding:40px;position:relative;cursor:default}
-
-/* Типографика */
-.text1{
-  font:700 clamp(2.5rem,7vw,7rem) "Inika",sans-serif;
-  line-height:.9;color:#29c770;
-  text-shadow:0 0 10px rgba(41,199,112,.25),0 0 40px rgba(41,199,112,.15);
-  filter:drop-shadow(0 3px 8px rgba(0,0,0,.2))
-}
-.text2{
-  font:800 clamp(2rem,10vw,12rem) "Inika",sans-serif;
-  color:rgba(255,255,255,.08);
-  -webkit-text-stroke:2px rgba(255,255,255,.8);
-  letter-spacing:4px
-}
-.text3{
-  font:400 italic clamp(1rem,1.2vw,1.4rem) "InInika",serif;
-  max-width:600px;line-height:1.7;
-  animation:colorBreath 4s ease-in-out 1.4s infinite
-}
-
-/* Button */
-.button1{margin-top:2rem}
-.button1 button{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 36px;background:rgba(11,15,13,.6);
-  border:2px solid rgba(41,199,112,.5);border-radius:50px;
-  color:#e7f2ec;font:600 1rem "Montserrat";letter-spacing:.5px;
-  cursor:pointer;backdrop-filter:blur(15px);
-  box-shadow:0 6px 22px rgba(0,0,0,.35);transition:all .3s ease
-}
-.button1 button:hover{border-color:#29c770;color:#29c770;transform:translateY(-2px)}
-
-.text1,.text2,.text3,.button1{opacity:0;transform:translateY(40px)}
-body.ready .text1{animation:rise .9s cubic-bezier(.25,.1,.25,1) .15s both}
-body.ready .text2{animation:rise 1s cubic-bezier(.25,.1,.25,1) .35s both}
-body.ready .text3{animation:rise 1s cubic-bezier(.25,.1,.25,1) .55s both,colorBreath 4s ease-in-out 1.4s infinite}
-body.ready .button1{animation:rise .8s ease .8s both}
-
-@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-@keyframes colorBreath{0%,100%{color:#e7f2ec}50%{color:#29c770}}
-
-/* ==== TOURS PREVIEW ==== */
-.tours-preview{margin-top: 0; position:relative;padding:10px 40px;background:none;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;overflow:hidden}
-.tours-inner{max-width:1400px;margin:0 auto}
-.tours-title{font:700 clamp(2.2rem,5vw,3rem) "Inika",serif;color:#29c770;text-align:left;margin-bottom:15px;text-shadow:0 0 10px rgba(41,199,112,.25)}
-
-.tours-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
-.side-tours{display:flex;flex-direction:column;gap:40px}
-
-
-/* Cards */
-.tour-card{
-  background:rgba(11,15,13,.75);border:1px solid rgba(41,199,112,.15);
-  border-radius:22px;box-shadow:0 6px 22px rgba(0,0,0,.35);
-  overflow:hidden;transition:transform .4s ease,border-color .3s ease;cursor:pointer
-}
-.tour-card:hover{transform:translateY(-6px);border-color:rgba(41,199,112,.4)}
-.tour-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:filter .4s ease}
-.tour-card:hover img{filter:brightness(1)}
-
-.tour-card .info{padding:20px 24px 28px}
-.tour-card h3{color:#29c770;font:700 1.3rem "Inika",serif;margin:0 0 8px}
-.tour-card p{color:rgba(231,242,236,.85);font-size:.95rem;line-height:1.5}
-
-/* Big main card */
-.tour-card.big{
-  display:flex;flex-direction:column;overflow:hidden;border-radius:16px;
-  background:rgba(11,15,13,.85);box-shadow:0 8px 24px rgba(0,0,0,.2)
-}
-.tour-card.big img{width:100%;height:400px;object-fit:cover;filter:brightness(.85);transition:filter .4s ease;display:block;flex-shrink:0}
-.tour-card.big:hover img{filter:brightness(1)}
-.tour-card.big .info{position:static;padding:24px 32px;animation:fadeUp .6s ease both}
-.tour-card.big h3{color:#29c770;font:700 1.6rem "Inika";margin-bottom:10px}
-.tour-card.big .desc{font-size:.95rem;line-height:1.6;color:rgba(231,242,236,.9);max-width:600px;margin-bottom:20px}
-
-/* Buttons */
-.book-btn,.more-btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  background:rgba(11,15,13,.6);border:2px solid rgba(41,199,112,.5);
-  color:#e7f2ec;text-decoration:none;transition:all .3s ease;
-  backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35)
-}
-.book-btn{padding:10px 28px;border-radius:30px;font:600 .95rem "Montserrat"}
-.more-btn{padding:12px 36px;border-radius:40px;font:600 1rem "Montserrat"}
-.book-btn:hover,.more-btn:hover{color:#29c770;border-color:#29c770;transform:translateY(-2px)}
-
-.more-tours{margin-top:30px;margin-bottom:15px;text-align:center}
-
-.tour-card.small img{height:200px}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-
-:where(*,*::before,*::after){box-sizing:border-box;user-select:none;-webkit-user-select:none;-webkit-user-drag:none}
-:where(input,textarea){user-select:text;-webkit-user-select:text}
-html,body{margin:0;padding:0;height:100%;font-size:16px;overflow-x:hidden;scrollbar-width:none;scroll-behavior:smooth}
-:where(html,body)::-webkit-scrollbar{width:0;height:0}
-body{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
-
-.fade-item{opacity:0;transform:translateY(40px) scale(.92);filter:blur(3px);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.25,.1,.25,1),filter .9s ease;will-change:opacity,transform,filter}
-.fade-item.visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-
-.webback{position:fixed;inset:0;width:100%;height:100%;background:center/cover no-repeat;z-index:-1}
-
-#pageloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(120% 80% at 50% 0%,#0b0f0d 20%,#0d1512 70%,#0b0f0d 100%);opacity:1;visibility:visible;transition:opacity .6s ease,visibility .6s ease}
-#pageloader.hide{opacity:0;visibility:hidden}
-html.lock,body.lock{overflow:hidden}
-
-.clover{width:64px;height:64px;position:relative;animation:spin 1.6s linear infinite;background:radial-gradient(closest-side,#29c770 98%,transparent)0 0/50% 50% no-repeat,radial-gradient(closest-side,#29c770 98%,transparent)100% 0/50% 50% no-repeat,radial-gradient(closest-side,#29c770 98%,transparent)0 100%/50% 50% no-repeat,radial-gradient(closest-side,#29c770 98%,transparent)100% 100%/50% 50% no-repeat;border-radius:14px;filter:drop-shadow(0 6px 18px rgba(41,199,112,.35))}
-.clover i{position:absolute;inset:0;margin:auto;width:18px;height:18px;transform:rotate(45deg);background:#e7f2ec;border-radius:4px;box-shadow:0 0 0 2px #103c2a inset}
-.clover::after{content:"";position:absolute;inset:-12px;border-radius:16px;mask:radial-gradient(circle at 50% 50%,transparent 34px,#000 34.5px);background:conic-gradient(from 0turn,#36e088 0 25%,#1ea55f 0 50%,#36e088 0 75%,#1ea55f 0 100%);animation:dash 1.2s ease-in-out infinite}
-
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes dash{0%{transform:rotate(0)scale(.9);opacity:.6}50%{transform:rotate(90deg)scale(1);opacity:1}100%{transform:rotate(180deg)scale(.9);opacity:.6}}
-
-.header{position:fixed;top:20px;left:50%;transform:translate(-50%,-40px);width:clamp(300px,90%,1200px);height:60px;display:flex;align-items:center;justify-content:space-between;padding:10px 40px;background:rgba(11,15,13,.75);backdrop-filter:blur(15px);border:1px solid rgba(41,199,112,.15);border-radius:50px;box-shadow:0 6px 22px rgba(0,0,0,.35);color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;z-index:1000;opacity:0}
-body.ready .header{animation:slideIn .8s ease forwards .1s}
-
-@keyframes slideIn{0%{opacity:0;transform:translate(-50%,-40px)}100%{opacity:1;transform:translate(-50%,0)}}
-
-.logo{color:#29c770;font-size:1.2rem;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:opacity .3s}
-.logo:hover{opacity:.8}
-.menu{display:flex;align-items:center;gap:24px}
-.menu a{color:#e7f2ec;font-size:.95rem;text-decoration:none;transition:color .3s}
-.menu a:hover{color:#29c770}
-.language{position:relative;display:flex;align-items:center;justify-content:center;width:72px;height:32px;background:rgba(255,255,255,.05);border:1px solid rgba(41,199,112,.25);border-radius:20px;cursor:pointer;transition:.3s}
-.language::before{content:attr(data-lang);color:#e7f2ec;font-size:.9rem;font-weight:600;letter-spacing:.3px}
-.language:hover{border-color:#29c770;background:rgba(41,199,112,.1)}
-.burger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:none;border:0;cursor:pointer;z-index:1100}
-.burger span{display:block;width:100%;height:2px;background:#e7f2ec;border-radius:2px;transition:transform .35s cubic-bezier(.65,.05,.36,1),opacity .25s ease,background .3s ease;transform-origin:center}
-.burger.active span:nth-child(1){transform:translateY(9px) rotate(45deg)}
-.burger.active span:nth-child(2){transform:scaleX(0);opacity:0}
-.burger.active span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+/* ========================= PAGE 1 HERO ========================= */
 .page1{position:relative;display:flex;align-items:center;justify-content:center;height:100vh;background:none;color:#e7f2ec;overflow:hidden;text-align:left;margin-bottom:0}
 .page1-text{display:flex;flex-direction:column;width:100%;max-width:1400px;padding:40px;position:relative;cursor:default}
-
 .text1{font:700 clamp(2.5rem,7vw,7rem) "Inika",sans-serif;line-height:.9;color:#29c770;text-shadow:0 0 10px rgba(41,199,112,.25),0 0 40px rgba(41,199,112,.15)}
 .text2{font:800 clamp(2rem,10vw,12rem) "Inika",sans-serif;color:rgba(255,255,255,.08);-webkit-text-stroke:2px rgba(255,255,255,.8);letter-spacing:4px}
 .text3{font:400 italic clamp(1rem,1.2vw,1.4rem) "Inika",serif;max-width:600px;line-height:1.7;animation:colorBreath 4s ease-in-out 1.4s infinite}
-.button1{margin-top:2rem}
-.button1 button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 36px;background:rgba(11,15,13,.6);border:2px solid rgba(41,199,112,.5);border-radius:50px;color:#e7f2ec;font:600 1rem "Montserrat";letter-spacing:.5px;cursor:pointer;backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35);transition:all .3s}
-.button1 button:hover{border-color:#29c770;color:#29c770;transform:translateY(-2px)}
+.button1{margin-top:2rem}.button1 button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 36px;background:rgba(11,15,13,.6);border:2px solid rgba(41,199,112,.5);border-radius:50px;color:#e7f2ec;font:600 1rem "Montserrat";letter-spacing:.5px;cursor:pointer;backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35);transition:all .3s}.button1 button:hover{border-color:#29c770;color:#29c770;transform:translateY(-2px)}
+@keyframes colorBreath{0%,100%{color:#e7f2ec}50%{color:#29c770}}@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+body.ready .text1{animation:rise .9s cubic-bezier(.25,.1,.25,1) .15s both}body.ready .text2{animation:rise 1s cubic-bezier(.25,.1,.25,1) .35s both}body.ready .text3{animation:rise 1s cubic-bezier(.25,.1,.25,1) .55s both,colorBreath 4s ease-in-out 1.4s infinite}body.ready .button1{animation:rise .8s ease .8s both}
 
-@keyframes colorBreath{0%,100%{color:#e7f2ec}50%{color:#29c770}}
-@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-
-body.ready .text1{animation:rise .9s cubic-bezier(.25,.1,.25,1) .15s both}
-body.ready .text2{animation:rise 1s cubic-bezier(.25,.1,.25,1) .35s both}
-body.ready .text3{animation:rise 1s cubic-bezier(.25,.1,.25,1) .55s both,colorBreath 4s ease-in-out 1.4s infinite}
-body.ready .button1{animation:rise .8s ease .8s both}
+/* ========================= TOURS PREVIEW ========================= */
 .tours-preview{margin-top:0;position:relative;padding:10px 40px;background:none;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;overflow:hidden}
 .tours-inner{max-width:1400px;margin:0 auto}
 .tours-title{font:700 clamp(2.2rem,5vw,3rem) "Inika",serif;color:#29c770;margin-bottom:15px;text-shadow:0 0 10px rgba(41,199,112,.25)}
 .tours-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
 .side-tours{display:flex;flex-direction:column;gap:40px}
+
 .tour-card{background:rgba(11,15,13,.75);border:1px solid rgba(41,199,112,.15);border-radius:22px;box-shadow:0 6px 22px rgba(0,0,0,.35);overflow:hidden;transition:transform .4s ease,border-color .3s ease;cursor:pointer}
 .tour-card:hover{transform:translateY(-6px);border-color:rgba(41,199,112,.4)}
-.tour-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:filter .4s ease}
-.tour-card:hover img{filter:brightness(1)}
+.tour-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:filter .4s ease}.tour-card:hover img{filter:brightness(1)}
 .tour-card .info{padding:20px 24px 28px}
-.tour-card h3{color:#29c770;font:700 1.3rem "Inika";margin:0 0 8px}
-.tour-card p{color:rgba(231,242,236,.85);font-size:.95rem;line-height:1.5}
+.tour-card h3{color:#29c770;font-family:"Inika",serif;font-weight:700;font-size:1.2rem;margin:0 0 8px}
+.tour-card p{color:rgba(231,242,236,.85);font-size:.8rem;line-height:1.5}
+
 .tour-card.big{display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(11,15,13,.85);box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.tour-card.big img{width:100%;height:400px;object-fit:cover;filter:brightness(.85);transition:filter .4s ease;display:block}
+.tour-card.big img{width:100%;height:400px;object-fit:cover;filter:brightness(.85);transition:filter .4s ease}
 .tour-card.big:hover img{filter:brightness(1)}
 .tour-card.big .info{padding:24px 32px;animation:fadeUp .6s ease both}
-.tour-card.big h3{color:#29c770;font:700 1.6rem "Inika";margin-bottom:10px}
-.tour-card.big .desc{font-size:.95rem;line-height:1.6;color:rgba(231,242,236,.9);max-width:600px;margin-bottom:20px}
+.tour-card.big h3{color:#29c770;font-family:"Inika";font-weight:700;font-size:1.2rem;margin-bottom:10px}
+.tour-card.big .desc{font-size:.8rem;line-height:1.6;color:rgba(231,242,236,.9);max-width:600px;margin-bottom:20px}
+
 .book-btn,.more-btn{display:inline-flex;align-items:center;justify-content:center;background:rgba(11,15,13,.6);border:2px solid rgba(41,199,112,.5);color:#e7f2ec;text-decoration:none;transition:all .3s ease;backdrop-filter:blur(15px);box-shadow:0 6px 22px rgba(0,0,0,.35)}
 .book-btn{padding:10px 28px;border-radius:30px;font:600 .95rem "Montserrat"}
 .more-btn{padding:12px 36px;border-radius:40px;font:600 1rem "Montserrat"}
 .book-btn:hover,.more-btn:hover{color:#29c770;border-color:#29c770;transform:translateY(-2px)}
+
 .more-tours{text-align:center;margin:30px 0}
-.tour-card.small img{height:200px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-/* WHY OLGATOURS */
+/* ========================= WHY OLGATOURS ========================= */
 .why-section{position:relative;padding:80px 40px;background:none;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif}
 .why-inner{max-width:1200px;margin:0 auto;text-align:center}
 .why-title{font:700 clamp(2.2rem,5vw,3rem) "Inika";color:#29c770;margin-bottom:50px;text-shadow:0 0 10px rgba(41,199,112,.25);text-align:left}
@@ -293,9 +67,10 @@ body.ready .button1{animation:rise .8s ease .8s both}
 .why-card:hover{background:rgba(11,15,13,.75);transform:translateY(-6px);border-color:rgba(41,199,112,.4);box-shadow:0 0 25px rgba(41,199,112,.15)}
 .why-card h3{font:600 1.3rem "Montserrat";color:#29c770;margin-bottom:10px}
 .why-card p{color:#cdd8d3;font-size:.95rem;line-height:1.6}
-/* ABOUT HERO (FIXED + MINIFIED) */
+
+/* ========================= ABOUT HERO ========================= */
 .about-hero-section{padding:120px 40px 90px;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif;display:flex;justify-content:center}
-.about-hero-section .wrapper{width:100%;max-width:1400px;margin:0 auto}
+.about-hero-section .wrapper{width:100%;max-width:1400px;margin:auto}
 .about-hero-split{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
 .about-left{z-index:2;padding-right:20px}
 .about-left .mini{font:700 clamp(1.4rem,2.8vw,2.2rem) "Inika";letter-spacing:6px;color:#29c770;margin-bottom:25px;text-shadow:0 0 20px rgba(41,199,112,.35)}
@@ -306,10 +81,11 @@ body.ready .button1{animation:rise .8s ease .8s both}
 .about-right img{width:100%;height:100%;object-fit:cover;filter:brightness(.9) contrast(1.05);transform:scale(1.04)}
 .mini-row{margin-top:70px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .mini-feature{text-align:center;font-weight:600;font-size:1.1rem;padding:16px 20px;background:rgba(11,15,13,.6);border:1px solid rgba(41,199,112,.2);border-radius:18px;backdrop-filter:blur(12px);transition:.3s;color:#29c770;letter-spacing:.5px}
-.mini-feature:hover{text-decoration: underline; transform:translateY(-4px);border-color:#29c770;box-shadow:0 12px 35px rgba(41,199,112,.35)}
-/* CONTACTS */
+.mini-feature:hover{text-decoration:underline;transform:translateY(-4px);border-color:#29c770;box-shadow:0 12px 35px rgba(41,199,112,.35)}
+
+/* ========================= CONTACTS ========================= */
 .contacts-section{font-size:1.2rem;color:#29c770;font-family:"Montserrat",system-ui,sans-serif;background:none;padding:80px 0;display:flex;justify-content:center}
-.contacts-inner{width:100%;max-width:1200px;padding:0 40px;margin:0 auto}
+.contacts-inner{width:100%;max-width:1200px;padding:0 40px;margin:auto}
 .contacts-title{font:700 clamp(2.2rem,5vw,3rem) "Inika";color:#29c770!important;margin-bottom:40px;text-shadow:0 0 10px rgba(41,199,112,.25);position:relative;text-decoration:none!important}
 .contacts-title::after{content:"";position:absolute;left:0;bottom:-10px;width:90px;height:3px;background:#29c770;border-radius:10px;opacity:.7}
 .contacts-grid{display:grid;grid-template-columns:7fr 5fr;gap:24px;margin-top:40px}
@@ -322,87 +98,86 @@ body.ready .button1{animation:rise .8s ease .8s both}
 .contacts-actions{display:flex;gap:12px;margin-top:10px}
 .contacts-actions .btn{padding:10px 24px;border-radius:40px;border:2px solid rgba(41,199,112,.4);background:rgba(11,15,13,.6);color:#e7f2ec;font-weight:600;letter-spacing:.3px;transition:.3s}
 .contacts-actions .btn:hover{border-color:#29c770;color:#29c770;transform:translateY(-2px)}
-.contacts-info h3{margin:0 0 12px 0!important;padding:0!important;font:600 1.25rem "Montserrat"!important;color:#29c770!important;text-transform:none!important;letter-spacing:0!important}
+.contacts-info h3{margin:0 0 12px!important;font:600 1.25rem "Montserrat"!important;color:#29c770!important}
 .contacts-info p{color:#cdd8d3;font-size:.95rem;line-height:1.55}
-/* FOOTER */
+
+/* ========================= FOOTER ========================= */
 .footer{margin-top:80px;padding:50px 20px;background:rgba(11,15,13,.75);border-top:1px solid rgba(41,199,112,.2);backdrop-filter:blur(15px);font-family:"Montserrat",system-ui,sans-serif}
-.footer-inner{max-width:1200px;margin:0 auto;text-align:center}
+.footer-inner{max-width:1200px;margin:auto;text-align:center}
 .footer-logo{color:#29c770;font-size:1.3rem;font-weight:700;text-decoration:none}
 .footer-menu{margin:15px 0 20px;display:flex;justify-content:center;gap:24px}
-.footer-menu a{color:#e7f2ec;font-size:.9rem;text-decoration:none;transition:.25s}
-.footer-menu a:hover{color:#29c770}
+.footer-menu a{color:#e7f2ec;font-size:.9rem;text-decoration:none;transition:.25s}.footer-menu a:hover{color:#29c770}
 .copy{margin-top:12px;color:rgba(255,255,255,.45);font-size:.85rem}
-/* TOURS PAGE */
+
+/* ========================= TOURS PAGE ========================= */
 body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .tours-page{padding:140px 40px 60px;color:#e7f2ec;font-family:"Montserrat",system-ui,sans-serif}
 .tours-inner{max-width:1400px;margin:0 auto}
-.tours-title{text-align: center; font:700 3rem "Inika",serif;color:#29c770;margin-bottom:30px;text-shadow:0 0 10px rgba(41,199,112,.25)}
+.tours-title{text-align:center;font:700 3rem "Inika",serif;color:#29c770;margin-bottom:30px;text-shadow:0 0 10px rgba(41,199,112,.25)}
 .tours-list{display:flex;flex-direction:column;gap:30px}
-/* GRID */
 .tours-grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
-/* MODAL */
-.modal{position:fixed;inset:0;display:none;justify-content:center;align-items:center;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:9999}
-.modal.active{display:flex}
+
+/* ========================= MODAL + TOAST ========================= */
+.modal{position:fixed;inset:0;display:none;justify-content:center;align-items:center;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:9999}.modal.active{display:flex}
 .modal-content{background:rgba(11,15,13,.9);border:1px solid rgba(41,199,112,.25);padding:30px;width:380px;border-radius:22px;font-family:"Montserrat",system-ui,sans-serif;color:#e7f2ec;position:relative;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-.modal-content input,.modal-content textarea{width:100%;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(41,199,112,.25);color:#fff;margin-bottom:14px}
-.modal-content textarea{height:80px;resize:none}
+.modal-content input,.modal-content textarea{width:100%;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(41,199,112,.25);color:#fff;margin-bottom:14px}.modal-content textarea{height:80px;resize:none}
 .close{position:absolute;right:18px;top:10px;font-size:26px;cursor:pointer}
-/* TOAST */
 #toastContainer{position:fixed;top:90px;right:25px;display:flex;flex-direction:column;gap:10px;z-index:99999}
 .toast{min-width:260px;padding:14px 18px;border-radius:12px;font-size:.95rem;color:#e2f8ec;background:rgba(20,30,25,.9);border:1px solid rgba(41,199,112,.25);box-shadow:0 4px 15px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px;animation:toastIn .4s ease,toastOut .4s ease 4s forwards}
-.toast.success{border-left:4px solid #29c770}
-.toast.error{border-left:4px solid #e14e4e}
+.toast.success{border-left:4px solid #29c770}.toast.error{border-left:4px solid #e14e4e}
 .toast span.icon{font-size:1.2rem}
 @keyframes toastIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
 @keyframes toastOut{to{opacity:0;transform:translateX(20px)}}
-/*TOUR CARDS*/
-.tour-card{background:rgba(11,15,13,.75);border:1px solid rgba(41,199,112,.18);border-radius:20px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.35);backdrop-filter:blur(6px);transition:.3s ease}
-.tour-card:hover{transform:translateY(-4px);border-color:rgba(41,199,112,.35);background:rgba(11,15,13,.82)}
-/* IMAGE */
+
+/* ========================= TOUR CARDS EXTRA ========================= */
 .tour-img{position:relative;height:180px;overflow:hidden}
-.tour-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:.35s}
-.tour-card:hover img{filter:brightness(1)}
+.tour-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:.35s}.tour-card:hover img{filter:brightness(1)}
 .tour-tag{position:absolute;top:12px;left:12px;padding:6px 12px;font-size:.75rem;border-radius:14px;background:rgba(41,199,112,.35);color:#e7f2ec;font-weight:600;backdrop-filter:blur(8px)}
-/* TEXT */
 .tour-info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
-.tour-info h3{margin:0;font-family:"Inika",serif;font-weight:700;font-size:1rem;color:#29c770}
-/* DESCRIPTION */
-.tour-short{margin:0;color:rgba(231,242,236,.85);font-size:.9rem;line-height:1.5}
-/* RATING */
-.tour-rating{display:flex;align-items:center;gap:6px}
-.tour-rating .stars{font-size:.78rem;letter-spacing:1px;color:rgba(41,199,112,.9);text-shadow:0 0 8px rgba(41,199,112,.35)}
+.tour-info h3{margin:0;font-family:"Inika",serif;font-weight:700;font-size:1.2rem;color:#29c770}
+.tour-short{margin:0;color:rgba(231,242,236,.85);font-size:.8rem;line-height:1.5}
+.tour-rating{display:flex;align-items:center;gap:6px}.tour-rating .stars{font-size:.78rem;letter-spacing:1px;color:rgba(41,199,112,.9);text-shadow:0 0 8px rgba(41,199,112,.35)}
 .rating-number{font-size:.65rem;color:rgba(231,242,236,.5)}
-/* PRICE */
-.price-box{display:flex;flex-direction:column}
-.old-price{font-size:.9rem;color:rgba(231,242,236,.5);text-decoration:line-through}
-.tour-price{font-size:1.3rem;font-weight:700;color:#e7f2ec}
-/* BOTTOM */
+.price-box{display:flex;flex-direction:column}.old-price{margin-bottom: .2rem; font-size:.8rem;color:rgba(231,242,236,.5);text-decoration:line-through}.tour-price{font-size:.9rem;font-weight:700;color:#e7f2ec}
 .tour-bottom{margin-top:14px;display:flex;justify-content:space-between;align-items:center}
-/* BUTTON */
-.book-btn.small{padding:8px 18px;font-size:.8rem;border-radius:24px;border:2px solid rgba(41,199,112,.5);background:rgba(11,15,13,.6);color:#e7f2ec;transition:.25s}
-.book-btn.small:hover{color:#29c770;border-color:#29c770;transform:translateY(-2px)}
-/* WRAPPER */
+.book-btn.small{padding:8px 18px;font-size:.8rem;border-radius:24px;border:2px solid rgba(41,199,112,.5);background:rgba(11,15,13,.6);color:#e7f2ec;transition:.25s}.book-btn.small:hover{color:#29c770;border-color:#29c770;transform:translateY(-2px)}
+
+/* ========================= PROMO SECTION ========================= */
 .promo-wrapper{max-width:1400px;margin:60px auto}
 .promo-card{border-radius:22px}
 .promo-img{height:320px}
 .promo-tag{font-size:.75rem;font-family:"Montserrat",sans-serif;font-weight:600;padding:7px 16px}
-/* MARQUEE */
 .marquee{overflow:hidden;width:100%;height:22px;background:rgba(41,199,112,.15);backdrop-filter:blur(6px);border-top:1px solid rgba(41,199,112,.22);border-bottom:1px solid rgba(41,199,112,.22);position:relative;white-space:nowrap}
 .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:scroll 22s linear infinite}
 .marquee-item{font-family:"Comfortaa",sans-serif;font-size:.78rem;font-weight:700;color:#29c770;padding-right:2rem;text-transform:uppercase;letter-spacing:2px;text-shadow:0 0 6px rgba(41,199,112,.35)}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-/* CONTENT */
-.promo-info{display:flex;justify-content:space-between;align-items:flex-start;padding:22px 22px 28px;gap:40px}
-/* LEFT SIDE */
-.promo-left h3{margin:6px 0 10px;font-family:"Inika",serif;font-size:3rem;font-weight:700;color:#29c770}
-.promo-desc{color:rgba(231,242,236,.85);font-family:"Montserrat",sans-serif;font-size:.9rem;font-weight:400;line-height:1.55;max-width:900px}
-/* RIGHT SIDE */
+
+.promo-info{display:flex;justify-content:space-between;align-items:flex-start;padding:22px;gap:40px}
+.promo-left h3{margin:6px 0 10px;font-family:"Inika",serif;font-size:2rem;font-weight:700;color:#29c770}
+.promo-desc{color:rgba(231,242,236,.85);font-family:"Montserrat",sans-serif;font-size:1.2rem;font-weight:400;line-height:1.55;max-width:900px}
 .promo-right{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;min-height:180px}
-.promo-price-box{text-align:right}
-.promo-price-box .tour-price{font-family:"Montserrat",sans-serif;font-size:1.3rem;font-weight:700;color:#e7f2ec}
-.promo-price-box .old-price{font-family:"Montserrat",sans-serif;font-size:.9rem;font-weight:400;color:rgba(231,242,236,.5);text-decoration:line-through}
+.promo-price-box{text-align:right}.promo-price-box .tour-price{font-family:"Montserrat",sans-serif;font-size:1.3rem;font-weight:700;color:#e7f2ec}.promo-price-box .old-price{font-family:"Montserrat",sans-serif;font-size:.9rem;font-weight:400;color:rgba(231,242,236,.5);text-decoration:line-through}
 .promo-book-btn{margin-top:auto;font-family:"Montserrat",sans-serif;font-size:.8rem;font-weight:600}
-/* DISABLE HOVER */
-.promo-card:hover{transform:none!important;border-color:rgba(41,199,112,.18)!important;background:rgba(11,15,13,.75)!important}
-.promo-card:hover .promo-img img{transform:scale(1.08);filter:brightness(1)}
+.promo-card:hover{transform:none!important;border-color:rgba(41,199,112,.18)!important;background:rgba(11,15,13,.75)!important}.promo-card:hover .promo-img img{transform:scale(1.08);filter:brightness(1)}
 .promo-img img{transition:transform .45s ease,filter .35s ease}
+.price-disclaimer {
+    margin: 60px auto 40px;
+    padding: 18px 24px;
+    max-width: 800px;
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.55;
+    color: #29c770;
+    background: rgba(11,15,13,.55);
+    border: 1px solid rgba(41,199,112,.25);
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    opacity: .9;
+}
+.price-disclaimer span {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inika', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}

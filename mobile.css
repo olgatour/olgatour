@@ -143,10 +143,10 @@
 .promo-card{width:100%!important;max-width:92%!important;margin:0 auto 30px auto!important;border-radius:22px!important}
 .promo-img{height:220px!important}
 .promo-info{padding:20px 20px 40px!important;display:block!important}
-.promo-left h3{font-size:2.4rem!important;margin:0 0 10px 0!important;text-align:left!important}
+.promo-left h3{font-size:2.4rem!important;margin:0 0 10px!important;text-align:left!important}
 .promo-desc{font-size:.9rem!important;line-height:1.5!important;text-align:left!important}
 .promo-right{width:100%!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;margin-top:25px!important;gap:12px!important}
-.promo-price-box{text-align:center!important;margin:10px 0 0 0!important;width:100%!important}
+.promo-price-box{text-align:center!important;margin:10px 0 0!important;width:100%!important}
 .promo-book-btn{width:100%!important;max-width:260px!important;margin:0 auto!important}
 .promo-tag{margin-left:20px!important}
 }

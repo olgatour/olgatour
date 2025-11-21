@@ -46,15 +46,22 @@ if (burger && menu) {
 
   // CLOSE MENU ON LINK CLICK
   document.querySelectorAll("#menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      burger.classList.remove("active");
-      menu.classList.remove("open");
-    });
+    link.addEventListener("click", closeMenu);
   });
 }
 
 // LANG SWITCH
 const langSwitch = document.getElementById('langSwitch');
+
+if (langSwitch) {
+  langSwitch.addEventListener("click", closeMenu);
+}
+
+function closeMenu() {
+  burger?.classList.remove("active");
+  menu?.classList.remove("open");
+}
+
 
 const i18n = {
   en: {
@@ -128,6 +135,8 @@ const i18n = {
     tag_coastal: "Coastal",
 
     /* SHORT ROUTES (from tours.html cards) */
+    tour_kells_title: "Book of Kells",
+    tour_kells_route: "Book of Kells · island of origin · medieval abbey · Trinity College · Long Room Library · illuminated manuscript",
     tour_killarney_route: "Killarney 1 day tour · Ring of Kerry · Ross Castle · Old Abbey · Muckross House · Killarney National Park",
     tour_cork_route: "Cork walking tour · Elizabeth Fort · English Market · Cobh · Titanic Museum · Ireland’s highest cathedral · D. Kennedy’s town",
     tour_connemara_route: "Connemara National Park · scenic trails · panoramic viewpoints · Kylemore Abbey · Victorian Walled Garden",
@@ -149,8 +158,10 @@ const i18n = {
     promo_special_offer: "SPECIAL OFFER OF THE MONTH",
     promo_special_tag: "Special offer — 3 nights",
     promo_marquee: "Sale of the month — 20% OFF — Limited Offer — ",
-    promo_killarney_desc:"Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay. We will visit an incredible and mysterious place – Ross Castle... The journey will be “seasoned” with real ancient Irish legends.",
+    promo_killarney_desc:"Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay.We will visit an incredible and mysterious place – Ross Castle... The journey will be “seasoned” with real ancient Irish legends.",
     /* FOOTER */
+    price_disclaimer1: "The cost of each tour is discussed individually.",
+    price_disclaimer2: "Prices are flexible and depend on the date, group size and preferences!",
     copy: "© Olgatour, 2025"
   },
 
@@ -225,6 +236,8 @@ const i18n = {
     tag_coastal: "Побережье",
 
     /* SHORT ROUTES */
+    tour_kells_title: "Книга Келлсов",
+    tour_kells_route: "Книга Келлсов · остров происхождения · средневековое аббатство · Тринити-колледж · библиотека Long Room · иллюминированный манускрипт",
     tour_killarney_route: "Однодневный тур по Килларни · Кольцо Керри · замок Росс · старое аббатство · усадьба Макросс · национальный парк Килларни",
     tour_cork_route: "Пешеходная экскурсия по Корку · Elizabeth Fort · English Market · город Коуб · музей Титаника · самый высокий собор Ирландии · город Д. Кеннеди",
     tour_connemara_route: "Нац.парк Коннемара · смотровые площадки · пешеходные тропы · аббатство Кайломор · викторианский сад",
@@ -248,6 +261,8 @@ const i18n = {
     promo_marquee: "Скидка месяца — 20% — Ограниченное предложение — ",
     promo_killarney_desc:"Килларни, графство Керри. В начале нашего путешествия вы услышите легенды и истории залива реки Шаннон. Мы посетим удивительное и загадочное место — замок Росс... Путешествие будет приправлено настоящими древними ирландскими легендами.",
     /* FOOTER */
+    price_disclaimer1: "Стоимость каждого тура обсуждается индивидуально.",
+    price_disclaimer2: "И зависит от даты, маршрута, размера группы и ваших предпочтений!",
     copy: "© Olgatour, 2025"
   }
 };
