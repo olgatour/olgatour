@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olgatour - discover the beauty of Ireland through unique tours and adventures">
+    <meta name="theme-color" content="#0b3d2e">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inika:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Prata&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+    <title>Olgatours</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("xmwXnjygvIIQeJCkD");
+        })();
+    </script>
+
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="pageloader">
+        <div class="clover"><i></i></div>
+    </div>
+
+    <!-- Background -->
+    <div class="webback">
+        <img class="webback" src="img/back/webback.webp" alt="Background Image">
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Olgatours</a>
+
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="tours.html" data-i18n="nav_tours">Tours</a>
+            <a href="#about" data-i18n="nav_about">About Us</a>
+            <a href="#contacts" data-i18n="nav_contact">Contacts</a>
+            <div class="language" id="langSwitch" data-lang="EN"></div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="page1 fade-item" id="home">
+        <div class="page1-text fade-item">
+            <div class="text1" data-i18n="hero_title">YOUR JOURNEY<br>BEGINS HERE</div>
+            <div class="text2">OLGATOURS</div>
+            <div class="text3" data-i18n="hero_subtitle">Where the wind sings ancient songs,<br>and the land keeps the
+                breath of ages</div>
+
+            <div class="button1">
+                <button id="button1" data-i18n="hero_button">Explore more</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOURS PREVIEW -->
+    <section class="tours-preview fade-item" id="toursPreview">
+        <div class="tours-inner">
+            <h2 class="tours-title" data-i18n="tours_preview_title">POPULAR TOURS</h2>
+
+            <div class="tours-layout">
+                <!-- Big Killarney -->
+                <div class="tour-card big">
+                    <img src="img/tours/killarney.jpg" alt="Killarney" loading="lazy">
+                    <div class="info">
+                        <h3 data-i18n="tour_killarney_title">Killarney</h3>
+                        <p class="desc" data-i18n="tour_killarney_desc">
+                            Killarney County Kerry — a journey through Ireland’s most magical landscapes.
+                        </p>
+                        <a href="tours.html" class="book-btn" data-i18n="btn_readmore">Read More</a>
+                    </div>
+                </div>
+
+                <div class="side-tours">
+                    <div class="tour-card small">
+                        <img src="img/tours/cork.jpg" alt="Cork & Titanic Experience" loading="lazy">
+                        <div class="info">
+                            <h3 data-i18n="tour_cork_title">Cork & Titanic</h3>
+                            <p data-i18n="tour_cork_desc">Walk through history — from Elizabeth Fort to the Titanic
+                                Museum.</p>
+                        </div>
+                    </div>
+
+                    <div class="tour-card small">
+                        <img src="img/tours/dingle.jpg" alt="Dingle Peninsula" loading="lazy">
+                        <div class="info">
+                            <h3 data-i18n="tour_dingle_title">Dingle Peninsula</h3>
+                            <p data-i18n="tour_dingle_desc">Rugged cliffs and wild Atlantic views.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-tours">
+                <a href="tours.html" class="more-btn" data-i18n="btn_viewall">View All Tours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY OLGATOURS -->
+    <section id="why" class="why-section fade-item">
+        <div class="why-inner">
+            <h2 class="why-title" data-i18n="why_title">WHY OLGATOURS</h2>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3 data-i18n="why_1_title">🌿 Authentic Experience</h3>
+                    <p data-i18n="why_1_desc">We don’t just offer tours — we share real Irish stories.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3 data-i18n="why_2_title">🚐 Small Groups</h3>
+                    <p data-i18n="why_2_desc">Comfort, space, and time to truly enjoy your journey.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3 data-i18n="why_3_title">☘️ Local Guides</h3>
+                    <p data-i18n="why_3_desc">We know the hidden places and the best views.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3 data-i18n="why_4_title">💫 Flexible & Easy</h3>
+                    <p data-i18n="why_4_desc">Simple booking, instant confirmation, and responsive support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-hero-section fade-item">
+        <div class="wrapper">
+
+            <div class="about-hero-split">
+
+                <div class="about-left">
+                    <p class="mini" data-i18n="about_mini">ABOUT US</p>
+
+                    <h2 class="big-title">
+                        <span data-i18n="about_big_1" class="white">Discover</span><br>
+                        <span data-i18n="about_big_2" class="green">Ireland</span><br>
+                        <span data-i18n="about_big_3" class="white">Differently</span>
+                    </h2>
+
+                    <p class="hero-desc" data-i18n="about_hero_desc">
+                        Olgatour was created to redefine how people experience Ireland —
+                        deeper, calmer and more meaningful.
+                    </p>
+
+                    <div class="mini-row">
+                        <div class="mini-feature" data-i18n="about_tag1">#Eco Routes</div>
+                        <div class="mini-feature" data-i18n="about_tag2">#Local Life</div>
+                        <div class="mini-feature" data-i18n="about_tag3">#Hidden Spots</div>
+                        <div class="mini-feature" data-i18n="about_tag4">#Calm Travel</div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <div class="about-img-wrap">
+                        <img src="img/back/cliffs.jpg" alt="">
+                        <div class="img-gradient"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACTS -->
+    <section id="contacts" class="contacts-section fade-item">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="contacts_title">CONTACTS</h2>
+            </div>
+
+            <div class="grid contacts-grid">
+
+                <form class="item contacts-form" id="form">
+                    <label for="name" class="muted" data-i18n="form_name">Name</label>
+                    <input id="name" name="name" placeholder="Your name..." required>
+
+                    <label for="email" class="muted" data-i18n="form_email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required
+                        data-i18n="form_email_ph">
+
+                    <label for="msg" class="muted" data-i18n="form_message">Message</label>
+                    <textarea id="msg" name="msg" rows="4" placeholder="Your question..."></textarea>
+
+                    <div class="contacts-actions">
+                        <button class="btn" type="submit" data-i18n="form_send">Send</button>
+                        <span id="formStatus" class="muted" aria-live="polite"></span>
+                    </div>
+                </form>
+                <!--ASIDE-->
+                <aside class="item contacts-info">
+                    <h3 data-i18n="contact_info_title">FIND US HERE</h3>
+                    <p class="muted">
+                        <!-- Gmail -->
+                        <a href="mailto:clovertourhelp@gmail.com"
+                            style="display:flex;align-items:center;gap:8px;margin:6px 0;">
+                            <img src="img/gmail.svg" alt="Gmail"
+                                style="width:20px;height:20px;opacity:.95;filter:drop-shadow(0 0 8px rgba(41,199,112,.35));">
+                            clovertourhelp@gmail.com
+                        </a>
+                        <!-- Telegram -->
+                        <a href="https://t.me/Olgairishtour" target="_blank"
+                            style="display:flex;align-items:center;gap:8px;margin:6px 0;">
+                            <img src="img/telegram.svg" alt="Telegram"
+                                style="width:20px;height:20px;opacity:.95;filter:drop-shadow(0 0 8px rgba(41,199,112,.35));">
+                            @Olgairishtour
+                        </a>
+
+                        <span data-i18n="contact_hours">Mon–Fri, 10:00–18:00 (GMT)</span>
+                    </p>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-logo">Olgatour</a>
+
+            <nav class="footer-menu">
+                <a href="#home" data-i18n="nav_home">Home</a>
+                <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                <a href="#about" data-i18n="nav_about">About Us</a>
+                <a href="#contacts" data-i18n="nav_contact">Contacts</a>
+            </nav>
+
+            <p class="copy">© Olgatours, 2025</p>
+        </div>
+    </footer>
+
+    <div id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

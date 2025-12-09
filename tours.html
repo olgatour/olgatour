@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Olgatour - discover the beauty of Ireland through unique tours and adventures">
+    <meta name="theme-color" content="#0b3d2e" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Prata&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+    <title>OlgaTours</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init({ publicKey: "xmwXnjygvIIQeJCkD" });
+    </script>
+</head>
+
+<body>
+    <div id="pageloader">
+        <div class="clover"><i></i></div>
+    </div>
+
+    <div class="webback">
+        <img class="webback" src="img/back/webback.webp" alt="Background Image">
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html#home" class="logo" data-i18n="logo">Olgatour</a>
+
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="index.html#home" data-i18n="nav_home">Home</a>
+            <a href="index.html#about" data-i18n="nav_about">About Us</a>
+            <a href="index.html#contacts" data-i18n="nav_contact">Contacts</a>
+            <div class="language" id="langSwitch" data-lang="EN"></div>
+        </nav>
+    </header>
+
+    <!-- TOURS PAGE -->
+    <section class="tours-page fade-item">
+        <div class="tours-inner">
+            <h1 class="tours-title" data-i18n="tours_page_title">POPULAR TOURS</h1>
+
+            <div class="tours-grid">
+
+                <!-- CARD 1 -->
+                <div class="tour-card fade-item">
+                    <div class="tour-img">
+                        <img src="img/tours/kells.jpg" alt="Book of Kells">
+                        <span class="tour-tag" data-i18n="tag_book_kells">Book of Kells tour</span>
+                    </div>
+
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.9 / 5</span>
+                        </div>
+
+                        <h3 class="tour-card-title" data-i18n="tour_kells_title">Book of Kells</h3>
+
+                        <p class="tour-short" data-i18n="tour_kells_route">
+                            Secrets and true history of the ancient manuscript • Island of origin • Abbey where it was
+                            crafted • Trinity College • Real medieval journey
+                        </p>
+
+                        <div class="tour-bottom">
+                            <div class="price-box">
+                                <span class="old-price" data-i18n="old_price">Regular Price</span>
+                                <span class="tour-price" data-i18n="new_price1">🌿 Price Upon Request</span>
+                            </div>
+                            <button class="book-btn small" data-tour="Book of Kells" data-i18n="btn_book">Book</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CARD 2 -->
+                <div class="tour-card fade-item">
+                    <div class="tour-img">
+                        <img src="img/tours/cork.jpg" alt="Cork & Titanic experience">
+                        <span class="tour-tag" data-i18n="tag_walking">Walking Tour</span>
+                    </div>
+
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.6 / 5</span>
+                        </div>
+
+                        <h3 class="tour-card-title" data-i18n="tour_cork_title">Cork & Titanic Experience</h3>
+
+                        <p class="tour-short" data-i18n="tour_cork_route">
+                            Elizabeth Fort • English Market • Cobh • Titanic Museum • Cathedral
+                        </p>
+
+                        <div class="tour-bottom">
+                            <div class="price-box">
+                                <span class="old-price" data-i18n="old_price">Regular Price</span>
+                                <span class="tour-price" data-i18n="new_price2">🔍 Personalised Offer</span>
+                            </div>
+                            <button class="book-btn small" data-tour="Cork" data-i18n="btn_book">Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="tour-card fade-item">
+                    <div class="tour-img">
+                        <img src="img/tours/connemara.jpg" alt="Connemara National Park">
+                        <span class="tour-tag" data-i18n="tag_nature">Nature</span>
+                    </div>
+
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.8 / 5</span>
+                        </div>
+
+                        <h3 class="tour-card-title" data-i18n="tour_connemara_title">Connemara & Kylemore Abbey</h3>
+
+                        <p class="tour-short" data-i18n="tour_connemara_route">
+                            National Park • Scenic views • Kylemore Abbey • Walled Garden
+                        </p>
+
+                        <div class="tour-bottom">
+                            <div class="price-box">
+                                <span class="old-price" data-i18n="old_price">Regular Price</span>
+                                <span class="tour-price" data-i18n="new_price3">✨ Tailored Experience</span>
+                            </div>
+                            <button class="book-btn small" data-tour="Connemara" data-i18n="btn_book">Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="tour-card fade-item">
+                    <div class="tour-img">
+                        <img src="img/tours/dingle.jpg" alt="Dingle peninsula">
+                        <span class="tour-tag" data-i18n="tag_coastal">Coastal</span>
+                    </div>
+
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.5 / 5</span>
+                        </div>
+
+                        <h3 class="tour-card-title" data-i18n="tour_dingle_title">Dingle Peninsula</h3>
+
+                        <p class="tour-short" data-i18n="tour_dingle_route">
+                            Slea Head • Dingle Bay • Oratory • Blasket Islands • Coastline
+                        </p>
+
+                        <div class="tour-bottom">
+                            <div class="price-box">
+                                <span class="old-price" data-i18n="old_price">Regular Price</span>
+                                <span class="tour-price" data-i18n="new_price4">🧭 Bespoke Experience</span>
+                            </div>
+                            <button class="book-btn small" data-tour="Dingle" data-i18n="btn_book">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close" id="modalClose">&times;</span>
+
+            <h2 id="modalTourName" data-i18n="modal_booking_default">Booking</h2>
+
+            <form class="modal-form" id="bookingForm">
+                <input type="text" placeholder="Full Name" data-i18n-ph="form_name_ph" required>
+                <input type="email" placeholder="Email" data-i18n-ph="form_email_ph" required>
+                <input type="tel" placeholder="Phone Number" data-i18n-ph="form_phone_ph" required>
+                <textarea placeholder="Message..." data-i18n-ph="form_message_ph"></textarea>
+
+                <button type="submit" class="book-btn full-width" data-i18n="form_send">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PROMO -->
+    <section class="promo-wrapper">
+        <h1 class="tours-title" data-i18n="promo_special_offer">SPECIAL OFFER OF THE MONTH</h1>
+
+        <div class="promo-card tour-card">
+            <div class="promo-img tour-img">
+                <img src="img/tours/killarney-b.jpg" alt="Killarney Promo">
+                <span class="promo-tag tour-tag" data-i18n="promo_special_tag">Special offer — 3 nights</span>
+            </div>
+
+            <div class="marquee">
+                <div class="marquee-track" id="marqueeTrack">
+                    <span class="marquee-item" data-i18n="promo_marquee">- Special offer — Killarney — Limited Offer —
+                    </span>
+                </div>
+            </div>
+
+            <div class="promo-info">
+                <div class="promo-left">
+                    <div class="tour-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.7 / 5</span>
+                    </div>
+
+                    <h3 data-i18n="tour_killarney_title">Killarney</h3>
+
+                    <p class="promo-desc" data-i18n="promo_killarney_desc">
+                        Killarney County Kerry. At the beginning of our journey you will hear
+                        the secrets and legends of the Shannon River Bay.</br>We will visit an
+                        incredible and mysterious place – Ross Castle...
+                        <br><br>
+                        The journey will be “seasoned” with real ancient Irish legends.
+                    </p>
+
+                </div>
+
+                <div class="promo-right">
+                    <div class="price-box promo-price-box">
+                        <span class="old-price" data-i18n="old_price">Regular Price</span>
+                        <span class="tour-price" data-i18n="new_price1">🌿 Price Upon Request</span>
+                    </div>
+
+                    <button class="book-btn small" data-tour="Killarney" data-i18n="btn_book">Book</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="price-disclaimer fade-item">
+        <span data-i18n="price_disclaimer1">The cost of each tour is discussed individually.</span>
+        <span data-i18n="price_disclaimer2">Prices are flexible and depend on the date, group size and
+            preferences!</span>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="index.html#home" class="footer-logo" data-i18n="logo">Olgatours</a>
+
+            <nav class="footer-menu">
+                <a href="index.html#home" data-i18n="nav_home">Home</a>
+                <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                <a href="index.html#about" data-i18n="nav_about">About Us</a>
+                <a href="index.html#contacts" data-i18n="nav_contact">Contacts</a>
+            </nav>
+
+            <p class="copy" data-i18n="copy">© Olgatour, 2025</p>
+        </div>
+
+    </footer>
+
+    <div id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
