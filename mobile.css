@@ -31,9 +31,7 @@
 .tour-card:hover img{filter:brightness(.85)!important}
 }
 
-@media(max-width:768px){
-.fade-item{transform:translateY(20px) scale(.96);filter:blur(1.5px);transition:opacity .5s ease-out,transform .5s ease-out,filter .5s ease-out}
-}
+@media(max-width:768px){.fade-item{transform:translateY(20px) scale(.96);filter:blur(1.5px);transition:opacity .5s ease-out,transform .5s ease-out,filter .5s ease-out}}
 
 .tour-card{border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.3)}
 .tour-card .info{padding:16px 18px 20px}
@@ -52,10 +50,8 @@
 .why-card p{color:#cdd8d3;font-size:.85rem;line-height:1.45}
 
 /*============ CONTACTS ============*/
-@media(max-width:900px){
-.contacts-grid{grid-template-columns:1fr;gap:20px}
-.contacts-form,.contacts-info{grid-column:span 1}
-}
+@media(max-width:900px){.contacts-grid{grid-template-columns:1fr;gap:20px}
+.contacts-form,.contacts-info{grid-column:span 1}}
 
 @media(max-width:768px){
 .why-title,.contacts-title{text-align:center!important}
@@ -67,17 +63,36 @@
 .why-grid{grid-template-columns:1fr!important;gap:20px!important}
 }
 
-/*============ ABOUT ============*/
-@media(max-width:900px){
-.about-hero-split{grid-template-columns:1fr; align-items: center;text-align: center;}
-.about-right{height:350px;margin-top:20px}
+/*============ ABOUT V3 ============*/
+@media (max-width: 1000px) {
+    .as-grid{grid-template-columns: 1fr; gap: 50px;}
+    .as-right{order: -1;}
+    .as-orb{width: 420px; height: 420px;}
+    .as-title{text-align: center;}
+    .as-desc{max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;}
+    .as-left{text-align: center;}
+    .as-label{margin-bottom: 20px;}
 }
-@media(max-width:768px){
-.about-hero-section{padding:80px 20px}
-.mini-row{grid-template-columns:1fr 1fr;gap:16px}
-.mini-feature{font-size:1rem;padding:14px}
+
+@media (max-width: 768px) {
+    .as{padding: 80px 20px 60px;}
+    .as-orb{width: 300px; height: 300px;}
+    .as-stats-inside{bottom: 5px; gap: 5px; width: 85%;}
+    /* === ПЛОТНЫЕ ПЛАШКИ === */
+    .as-stat {
+        padding: 6px 8px; /* Уменьшаем внутренние отступы */
+        gap: 4px; /* Уменьшаем расстояние между элементами */
+    }
+    .as-stat-label {
+        font-size: .7rem; /* Еще меньше шрифт */
+        letter-spacing: .1em; /* Чуть меньше интервал */
+    }
+    .as-stat-value {
+        font-size: .8rem; /* Уменьшаем основной текст */
+    }
+    /* ======================= */
 }
-@media(max-width:768px){.about-right{display: none;}}
+
 /*============ TOURS PAGE ============*/
 @media(max-width:900px){
 .tour-row{grid-template-columns:180px 1fr 130px}
@@ -152,6 +167,4 @@
 .promo-tag{margin-left:20px!important}
 }
 
-@media(max-width:768px){
-.promo-right{min-height:unset!important}
-}
+@media(max-width:768px){.promo-right{min-height:unset!important}}

@@ -98,12 +98,19 @@ const i18n = {
     why_4_title: "💫 Flexible & Easy",
     why_4_desc: "Simple booking, instant confirmation, and responsive support.",
 
-    /* ABOUT */
-    about_title: "ABOUT US",
-    about_text: "Olgatour was created to make discovering Ireland simple, beautiful, and meaningful.",
-    about_fact1: "Eco-friendly routes",
-    about_fact2: "Supporting local places",
-    about_fact3: "Modern design",
+    /* ABOUT V3 */
+    about_label: "ABOUT US",
+    about_t1: "Discover",
+    about_t2: "Ireland",
+    about_t3: "Differently",
+    about_desc: "Olgatour was created to show Ireland the way locals live it — calm, sincere and beautifully unhurried. We guide travelers into quiet landscapes, coastal paths, ancient routes and hidden viewpoints where the island reveals its true character — peaceful, authentic and deeply memorable.",
+    as_stat_focus_label: "FOCUS",
+    as_stat_focus_value: "Eco Routes · Local Life",
+    as_stat_mood_label: "MOOD",
+    as_stat_mood_value: "Calm Travel · Hidden Spots",
+    as_stat_approach_label: "APPROACH",
+    as_stat_approach_value: "Personal Tours · Small Groups",
+
 
     /* CONTACTS */
     contacts_title: "CONTACTS",
@@ -127,7 +134,7 @@ const i18n = {
     btn_book: "Book",
     modal_booking_default: "Booking",
     modal_booking_prefix: "Booking: ",
-    //ABOUT
+    //OLD ABOUT REMNANTS
     about_mini: "ABOUT US",
     about_big_1: "Discover",
     about_big_2: "Ireland",
@@ -155,13 +162,10 @@ const i18n = {
 
     /* FULL DESCRIPTIONS (all 1:1 your text) */
     tour_killarney_full_desc: "Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay. We will visit an incredible and mysterious place – Ross Castle. From the castle we will sail on a boat across Lake Killarney, at the bottom of which, according to legend, an entire underwater kingdom is hidden. We will continue our journey to the mysterious abbey, which houses the “living heart”. At the end of the trip we will visit one of the most beautiful, popular and largest parks in Ireland – Killarney National Park. The journey will be seasoned with real ancient Irish legends. Let your journey begin with us.",
-
     tour_cork_full_title: "Cork and Titanic experience",
     tour_cork_full_desc: "Discover the Cork and Titanic Heritage Tour. Step into the rich history of Cork on this captivating journey. Begin with a Cork walking tour, exploring charming streets, Elizabeth Fort and learning about the fascinating origins of this great city. Experience the lively atmosphere of the English Market, a food lover’s paradise. Continue to the picturesque town of Cobh, home to the famous Titanic Museum, where the final chapter of the great ship’s story unfolds. Visit Ireland’s highest cathedral, a stunning masterpiece overlooking the harbor. On the way, enjoy the scenic charm of D. Kennedy’s town, filled with coastal beauty and local character.",
-
     tour_connemara_title: "Connemara & Kylemore Abbey",
     tour_connemara_full_desc: "Connemara National Park & Kylemore Abbey Tour. Immerse yourself in the wild beauty of Connemara National Park, where sweeping mountains, shimmering lakes and vast boglands create some of Ireland’s most breathtaking landscapes. Enjoy scenic trails and panoramic views that capture the essence of the west. Then, step into the fairytale setting of Kylemore Abbey, a stunning 19th-century castle nestled on the shores of a tranquil lake. Discover its romantic history, stroll through the Victorian Walled Garden and feel the peaceful atmosphere of this remarkable place. This journey blends natural wonders with cultural heritage for an unforgettable Irish experience.",
-
     tour_dingle_full_title: "Dingle peninsula",
     tour_dingle_full_desc: "Discover the breathtaking Dingle Peninsula, where rugged cliffs meet the wild Atlantic, charming villages dot the coastline and ancient history whispers from every corner. Drive along winding coastal roads with panoramic views, explore the colourful town of Dingle with its lively pubs and artisan shops and spot playful dolphins in Dingle Bay. Marvel at unforgettable spots like Slea Head Drive, Gallarus Oratory and the Blasket Islands, and wander through unique landscapes dotted with ancient forts, standing stones and hidden beaches. This tour offers a perfect mix of adventure, culture and unforgettable scenery.",
 
@@ -169,7 +173,7 @@ const i18n = {
     promo_special_offer: "SPECIAL OFFER OF THE MONTH",
     promo_special_tag: "Special offer — 3 nights",
     promo_marquee: "— Special offer — Killarney — Limited Offer — ",
-    promo_killarney_desc:"Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay.We will visit an incredible and mysterious place – Ross Castle... The journey will be “seasoned” with real ancient Irish legends.",
+    promo_killarney_desc: "Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay.We will visit an incredible and mysterious place – Ross Castle... The journey will be “seasoned” with real ancient Irish legends.",
     old_price: "Regular Price",
     new_price1: "🌿 Price Upon Request",
     new_price2: "🔍 Personalised Offer",
@@ -216,12 +220,18 @@ const i18n = {
     why_4_title: "💫 Удобно и просто",
     why_4_desc: "Простое бронирование, мгновенное подтверждение и отзывчивая поддержка.",
 
-    /* ABOUT */
-    about_title: "О НАС",
-    about_text: "Olgatour создан, чтобы сделать путешествия по Ирландии простыми, красивыми и осознанными.",
-    about_fact1: "Экологичные маршруты",
-    about_fact2: "Поддержка локальных мест",
-    about_fact3: "Современный дизайн",
+    /* ABOUT V3 */
+    about_label: "О НАС",
+    about_t1: "Откройте",
+    about_t2: "Ирландию",
+    about_t3: "По-новому",
+    about_desc: "Olgatour создан, чтобы показать Ирландию так, как ее видят местные жители — спокойной, искренней и невероятно неторопливой. Мы проводим путешественников по тихим пейзажам, прибрежным тропам, древним маршрутам и скрытым смотровым площадкам, где остров раскрывает свой истинный характер — мирный, аутентичный и глубоко запоминающийся.",
+    as_stat_focus_label: "ФОКУС",
+    as_stat_focus_value: "Эко-Маршруты · Местная Жизнь",
+    as_stat_mood_label: "НАСТРОЕНИЕ",
+    as_stat_mood_value: "Спокойное Путешествие · Скрытые Места",
+    as_stat_approach_label: "ПОДХОД",
+    as_stat_approach_value: "Персональные Туры · Малые Группы",
 
     /* CONTACTS */
     contacts_title: "КОНТАКТЫ",
@@ -245,7 +255,7 @@ const i18n = {
     btn_book: "Забронировать",
     modal_booking_default: "Бронирование",
     modal_booking_prefix: "Бронирование: ",
-    //ABOUT
+    //OLD ABOUT REMNANTS
     about_mini: "О НАС",
     about_big_1: "Откройте",
     about_big_2: "Ирландию",
@@ -272,13 +282,10 @@ const i18n = {
 
     /* FULL DESCRIPTIONS (1:1 your text) */
     tour_killarney_full_desc: "Килларни, графство Керри. В начале нашего путешествия вы услышите легенды и истории залива реки Шаннон. Мы посетим удивительное и загадочное место — замок Росс. Оттуда отправимся на лодочную прогулку по озеру Килларни, на дне которого, по легенде, скрыто целое подводное королевство. Затем продолжим путь к таинственному аббатству, где хранится «живое сердце». В конце поездки мы посетим один из самых красивых и известных парков Ирландии — национальный парк Килларни. Путешествие будет приправлено настоящими древними ирландскими легендами. Пусть ваше приключение начнётся с нами.",
-
     tour_cork_full_title: "Cork and Titanic experience",
     tour_cork_full_desc: "Откройте для себя тур Cork and Titanic Heritage. Погрузитесь в историю Корка во время увлекательной прогулки по городу, его улочкам и крепости Elizabeth Fort, узнавая о происхождении этого места. Почувствуйте атмосферу легендарного рынка English Market — рая для гурманов. Затем отправьтесь в живописный городок Коуб, где находится знаменитый музей Титаника, завершающий историю великого лайнера. Посетите самый высокий собор Ирландии с видом на гавань и по дороге насладитесь колоритом городка Д. Кеннеди с его прибрежной красотой и местным характером.",
-
     tour_connemara_title: "Коннемара и Кайлмор",
     tour_connemara_full_desc: "Тур Connemara National Park & Kylemore Abbey. Окунитесь в дикую красоту национального парка Коннемара, где горы, озёра и торфяники создают одни из самых впечатляющих пейзажей Ирландии. Насладитесь прогулками по тропам и панорамными видами Атлантики. Затем отправьтесь в сказочное аббатство Кайломор — замок XIX века на берегу спокойного озера. Узнайте его романтичную историю, прогуляйтесь по викторианскому саду и ощутите умиротворённую атмосферу этого места. Это путешествие объединяет природу и культуру, даря незабываемые впечатления.",
-
     tour_dingle_full_title: "Dingle peninsula",
     tour_dingle_full_desc: "Откройте для себя захватывающий полуостров Дингл, где суровые скалы встречаются с Атлантикой, а вдоль побережья тянутся уютные деревушки. Прокатитесь по извилистым прибрежным дорогам с панорамными видами, прогуляйтесь по яркому городу Дингл с пабами и ремесленными лавками и попробуйте заметить игривых дельфинов в заливе Дингл. Полюбуйтесь культовыми местами — Slea Head Drive, древней церковью Gallarus и островами Бласкет, исследуйте пейзажи с древними фортификациями, стоящими камнями и скрытыми пляжами. Тур сочетает приключение, культуру и незабываемые виды.",
 
@@ -286,7 +293,7 @@ const i18n = {
     promo_special_offer: "СПЕЦПРЕДЛОЖЕНИЕ МЕСЯЦА",
     promo_special_tag: "Спецпредложение — 3 ночи",
     promo_marquee: "— Special offer — Killarney — Limited Offer — ",
-    promo_killarney_desc:"Килларни, графство Керри. В начале нашего путешествия вы услышите легенды и истории залива реки Шаннон. Мы посетим удивительное и загадочное место — замок Росс... Путешествие будет приправлено настоящими древними ирландскими легендами.",
+    promo_killarney_desc: "Килларни, графство Керри. В начале нашего путешествия вы услышите легенды и истории залива реки Шаннон. Мы посетим удивительное и загадочное место — замок Росс... Путешествие будет приправлено настоящими древними ирландскими легендами.",
     old_price: "Стандартная цена",
     new_price1: "🌿 По запросу",
     new_price2: "🔍 Индивидуально",
@@ -299,7 +306,6 @@ const i18n = {
     copy: "© Olgatour, 2025"
   }
 };
-
 
 if (langSwitch) {
   langSwitch.addEventListener('click', () => {
@@ -453,14 +459,14 @@ const originalItem = track?.querySelector(".marquee-item");
 
 // Функция создаёт нужное количество клонов
 function fillMarqueeBase() {
-    if (!track || !originalItem) return;
-    let totalWidth = track.scrollWidth;
+  if (!track || !originalItem) return;
+  let totalWidth = track.scrollWidth;
 
-    while (totalWidth < window.innerWidth * 2.5) {
-        const clone = originalItem.cloneNode(true);
-        track.appendChild(clone);
-        totalWidth += clone.scrollWidth;
-    }
+  while (totalWidth < window.innerWidth * 2.5) {
+    const clone = originalItem.cloneNode(true);
+    track.appendChild(clone);
+    totalWidth += clone.scrollWidth;
+  }
 }
 
 // Первоначальное заполнение (на загрузке)
@@ -468,33 +474,33 @@ fillMarqueeBase();
 
 // Полная перестройка при смене языка
 function rebuildMarquee() {
-    if (!track) return;
+  if (!track) return;
 
-    const currentLang = localStorage.getItem("lang") || "en";
-    const text = i18n[currentLang].promo_marquee;
+  const currentLang = localStorage.getItem("lang") || "en";
+  const text = i18n[currentLang].promo_marquee;
 
-    track.innerHTML = ""; // очищаем
+  track.innerHTML = ""; // очищаем
 
-    // создаём новую оригинальную ноду
-    const newItem = document.createElement("span");
-    newItem.className = "marquee-item";
-    newItem.setAttribute("data-i18n", "promo_marquee");
-    newItem.textContent = text;
+  // создаём новую оригинальную ноду
+  const newItem = document.createElement("span");
+  newItem.className = "marquee-item";
+  newItem.setAttribute("data-i18n", "promo_marquee");
+  newItem.textContent = text;
 
-    track.appendChild(newItem);
+  track.appendChild(newItem);
 
-    // клонируем заново
-    let totalWidth = track.scrollWidth;
-    while (totalWidth < window.innerWidth * 2.5) {
-        const clone = newItem.cloneNode(true);
-        track.appendChild(clone);
-        totalWidth += clone.scrollWidth;
-    }
+  // клонируем заново
+  let totalWidth = track.scrollWidth;
+  while (totalWidth < window.innerWidth * 2.5) {
+    const clone = newItem.cloneNode(true);
+    track.appendChild(clone);
+    totalWidth += clone.scrollWidth;
+  }
 }
 
 // слушатель на смену языка
 if (langSwitch) {
-    langSwitch.addEventListener("click", () => {
-        setTimeout(() => rebuildMarquee(), 50);
-    });
+  langSwitch.addEventListener("click", () => {
+    setTimeout(() => rebuildMarquee(), 50);
+  });
 }
