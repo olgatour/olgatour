@@ -145,3 +145,202 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .promo-book-btn{margin-top:auto;font-family:"Nunito Sans",sans-serif;font-size:.8rem;font-weight:600}
 .price-disclaimer{margin:60px auto 40px;padding:18px 24px;max-width:800px;text-align:center;font-size:.9rem;line-height:1.55;color:#29c770;background:rgba(11,15,13,.55);border:1px solid rgba(41,199,112,.25);border-radius:20px;opacity:.9}
 .price-disclaimer span{display:flex;flex-direction:column;font-family:"Prata",sans-serif;font-weight:400;font-style:italic}
+/* === HOLIDAYS AND WINTER ADDITIONS (V1 STRICT) === */
+
+/* --- ОСНОВНАЯ СЕКЦИЯ --- */
+.christmas-wrapper{padding:120px 40px 30px;color:#e7f2ec;font-family:"Nunito Sans",sans-serif}
+.christmas-title{text-align:center;font:700 3rem "Prata",serif;color:#29c770;margin-bottom:10px;text-shadow:0 0 6px rgba(41,199,112,.2)}
+.christmas-sub{text-align:center;font-size:1rem;opacity:.75;margin-bottom:40px}
+.christmas-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px}
+
+/* --- РОДИТЕЛЬСКАЯ КАРТОЧКА: ПОЗИЦИОНИРОВАНИЕ И TRANSFORM --- */
+.christmas-card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    transition:transform .18s ease-out;
+    z-index: 1; 
+}
+.christmas-card:hover{
+    transform:translateY(-2px);
+}
+
+/* --- ВНУТРЕННИЙ КОНТЕЙНЕР: ВИЗУАЛЬНЫЕ СТИЛИ И OVERFLOW --- */
+.christmas-card-inner {
+    width: 100%;
+    height: 100%;
+    background:rgba(11,15,13,.75);
+    border:1px solid rgba(41,199,112,.18);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.22);
+    display: flex;
+    flex-direction: column;
+    /* Анимация: стили, кроме transform */
+    transition: border-color .18s ease-out, box-shadow .18s ease-out;
+}
+.christmas-card:hover .christmas-card-inner{
+    border-color:rgba(41,199,112,.35);
+    box-shadow:0 6px 16px rgba(0,0,0,.35); /* Усиленный hover box-shadow */
+}
+
+/* --- ИЗОБРАЖЕНИЕ И ТЕГ --- */
+.christmas-img{position:relative;height:220px;overflow:hidden}
+.christmas-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.85);
+    transition:filter .18s ease-out;
+}
+.christmas-card:hover .christmas-img img{filter:brightness(1)}
+.christmas-tag{position:absolute;bottom:14px;left:14px;padding:7px 14px;background:rgba(41,199,112,.35);border-radius:14px;font-size:.78rem;font-weight:600;color:#e7f2ec}
+
+/* --- ИНФОРМАЦИЯ И ЦЕНА --- */
+.christmas-info{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.x-title{margin:0;font-family:"Prata",serif;color:#29c770;font-size:1.35rem}
+.christmas-short{margin:0;font-size:.9rem;opacity:.85;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.christmas-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.christmas-card .book-btn{
+    background:rgba(11,15,13,.55);
+    border:2px solid rgba(41,199,112,.4);
+    transition:transform .18s ease-out,border-color .18s ease-out,color .18s ease-out,background .18s ease-out;
+}
+.christmas-card:hover .book-btn{ /* Селектор изменен на hover родительской карточки */
+    color:#29c770;
+    border-color:#29c770;
+    transform:translateY(-1px);
+}
+
+/* --- ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ (УКРАШЕНИЯ) --- */
+/* БАНТ */
+.card-bow .xmas-bow {
+    position: absolute;
+    top: -6px; 
+    left: -6px;
+    width: 132px;
+    height: 132px;
+    background: linear-gradient(135deg,#ff1f5c,#e60d44 50%,#be0733);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    box-shadow: 0 2px 8px rgba(255,45,80,.3);
+    z-index: 10;
+}
+.card-bow .xmas-bow::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#ff477d,#e60d44);
+    box-shadow: 0 0 6px rgba(0,0,0,.25);
+    z-index: 11;
+}
+/* ШАРФ */
+.card-scarf .xmas-scarf {
+    position: absolute;
+    top: -2px;
+    right: 26px;
+    width: 76px;
+    height: 185px;
+    background: linear-gradient(180deg,#f74c4c,#d92323 60%,#9d1c22);
+    border-radius: 12px 12px 32px 32px;
+    clip-path: path("M0,0 L76,0 L76,148 C58,152 48,160 38,168 C28,180 12,180 0,170 Z");
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    z-index: 10;
+}
+.card-scarf .xmas-scarf::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,.6);
+}
+.card-scarf .xmas-scarf::after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    width: 56px;
+    height: 8px;
+    background: repeating-linear-gradient(to right,rgba(255,255,255,.85) 0 4px,transparent 4px 10px);
+    opacity: .7;
+}
+/* --- WINTER MODE OVERRIDES (ПЕРЕОПРЕДЕЛЕНИЕ ДЛЯ ЗИМНЕГО РЕЖИМА) --- */
+body.winter .tours-title,body.winter .christmas-title{color:#1ecf73!important;text-shadow:0 0 10px rgba(30,207,115,.4)!important}
+
+/* СТИЛИ, КОТОРЫЕ ТЕПЕРЬ ПРИМЕНЯЮТСЯ К INNER КОНТЕЙНЕРУ */
+body.winter .tour-card,body.winter .christmas-card-inner,body.winter .promo-card{
+    background:rgba(255,255,255,.75)!important;
+    border:1px solid rgba(255,255,255,.55)!important;
+    box-shadow:0 6px 16px rgba(0,0,0,.15)!important
+}
+body.winter .tour-card:hover,body.winter .christmas-card:hover .christmas-card-inner,body.winter .promo-card:hover{border-color:rgba(255,255,255,.85)!important;box-shadow:0 10px 20px rgba(0,0,0,.22)!important}
+
+/* ОСТАЛЬНОЙ ЗИМНИЙ РЕЖИМ (БЕЗ ИЗМЕНЕНИЙ, ТАК КАК СЕЛЕКТОРЫ КОРРЕКТНЫ) */
+body.winter .tour-img img,body.winter .christmas-img img,body.winter .promo-img img{filter:brightness(1)!important}
+body.winter .tour-card:hover img,body.winter .christmas-card:hover img,body.winter .promo-card:hover img{filter:brightness(1.06)!important}
+body.winter .tour-tag,body.winter .christmas-tag,body.winter .promo-tag{background:rgba(255,255,255,.75)!important;color:#1ea76c!important}
+body.winter .tour-info h3,body.winter .x-title,body.winter .promo-left h3{color:#1cbf72!important;text-shadow:0 0 6px rgba(28,191,114,.35)!important}
+body.winter .tour-short,body.winter .christmas-short,body.winter .promo-desc{color:rgba(10,20,15,.85)!important}
+body.winter .rating-number{color:rgba(0,0,0,.45)!important}
+body.winter .old-price{color:rgba(0,0,0,.35)!important}
+body.winter .tour-price,body.winter .promo-price-box .tour-price{color:#0c3e29!important}
+body.winter .book-btn.small,body.winter .christmas-card .book-btn{background:rgba(255,255,255,.75)!important;border-color:rgba(30,207,115,.55)!important;color:#0a3926!important}
+body.winter .book-btn.small:hover,body.winter .christmas-card .book-btn:hover{border-color:#1ecf73!important;color:#1ecf73!important}
+body.winter .marquee{background:rgba(255,255,255,.7)!important;border-top:1px solid rgba(255,255,255,.85)!important;border-bottom:1px solid rgba(255,255,255,.85)!important}
+body.winter .marquee-item{color:#18c679!important}
+body.winter .price-disclaimer{background:rgba(255,255,255,.7)!important;border-color:rgba(255,255,255,.85)!important;color:#1cbf72!important;box-shadow:0 4px 10px rgba(0,0,0,.15)!important}
+body.winter .header{background:rgba(255,255,255,.75)!important;border:1px solid rgba(255,255,255,.8)!important;box-shadow:0 6px 18px rgba(0,0,0,.15)!important;backdrop-filter:blur(12px) saturate(1.2)!important;color:#0e221a!important}
+body.winter .logo{color:#17c56d!important;text-shadow:0 0 6px rgba(23,197,109,.3)!important}
+body.winter .menu a{color:#0e221a!important}
+body.winter .menu a:hover{color:#18d476!important}
+body.winter .language{background:rgba(255,255,255,.5)!important;border-color:rgba(255,255,255,.8)!important}
+body.winter .language::before{color:#0e221a!important}
+body.winter .language:hover{background:rgba(255,255,255,.8)!important;border-color:#1ada7b!important}
+body.winter .burger span{background:#0e221a!important}
+body.winter .footer{background:rgba(255,255,255,.75)!important;border-top:1px solid rgba(255,255,255,.9)!important;backdrop-filter:blur(12px) saturate(1.2)!important;box-shadow:0 -6px 16px rgba(0,0,0,.12)!important}
+body.winter .footer-logo{color:#18d476!important;text-shadow:0 0 6px rgba(23,197,109,.3)!important}
+body.winter .footer-menu a{color:#0e221a!important}
+body.winter .footer-menu a:hover{color:#1edc7e!important}
+body.winter .copy{color:rgba(0,0,0,.55)!important}
+/* --- WINTER MODE OVERRIDES (ПЕРЕОПРЕДЕЛЕНИЕ ДЛЯ ЗИМНЕГО РЕЖИМА) --- */
+/* 2. Заголовок (Header) и Меню - Обновляем цвет ссылок */
+body.winter .header{
+    /* ... (Ваши существующие стили header) ... */
+    color:#e7f2ec!important; /* Убедимся, что основной цвет header светлый (это может понадобиться для текста, который не охвачен ссылками) */
+}
+body.winter .menu a{
+    /* Ссылки меню делаем светлыми, чтобы они были видны на светлом фоне header */
+    color:#e7f2ec!important; 
+}
+body.winter .menu a:hover{
+    /* При наведении делаем их ярко-зелёными, как и другие интерактивные элементы */
+    color:#1edc7e!important; 
+}
+
+/* 3. Переопределение для Логотипа */
+body.winter .logo{
+    /* Делаем логотип ярким, как обычно */
+    color:#17c56d!important;
+    text-shadow:0 0 6px rgba(23,197,109,.3)!important;
+}
+
+/* 4. Язык (Language) */
+body.winter .language{
+    /* Чтобы текст языка был виден на светлом фоне */
+    background:rgba(255,255,255,.5)!important;
+    border-color:rgba(255,255,255,.8)!important;
+}
+body.winter .language::before{
+    /* Цвет текста языка */
+    color:#e7f2ec!important;
+}
+body.winter .language:hover{
+    /* Эффект наведения, чтобы был виден */
+    background:rgba(255,255,255,.8)!important;
+    border-color:#1ada7b!important;
+}
