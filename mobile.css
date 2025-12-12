@@ -291,3 +291,14 @@
     .x-title{font-size:1.1rem;}
     .christmas-short{font-size:.8rem;}
 }
+/*
+   СТИЛЬ ПРИМЕНЯЕТСЯ ТОЛЬКО, КОГДА ШИРИНА ЭКРАНА МЕНЬШЕ ИЛИ РАВНА 768px
+*/
+@media (max-width: 768px) {
+    
+    /* Точечное переопределение фона для зимней темы на мобильных */
+    body.winter .menu {
+        background: rgba(255, 255, 255, .85);
+    }
+
+}
