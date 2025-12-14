@@ -154,7 +154,7 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .christmas-wrapper{padding:120px 40px 30px;color:#e7f2ec;font-family:"Nunito Sans",sans-serif}
 .christmas-title{text-align:center;font:700 3rem "Prata",serif;color:#29c770;margin-bottom:10px;text-shadow:0 0 6px rgba(41,199,112,.2)}
 .christmas-sub{text-align:center;font-size:1rem;opacity:.75;margin-bottom:40px}
-.christmas-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px}
+.christmas-grid{align-items:start; max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px}
 
 /* --- РОДИТЕЛЬСКАЯ КАРТОЧКА: ПОЗИЦИОНИРОВАНИЕ И TRANSFORM --- */
 .christmas-card{
@@ -202,7 +202,58 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 /* --- ИНФОРМАЦИЯ И ЦЕНА --- */
 .christmas-info{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
 .x-title{margin:0;font-family:"Prata",serif;color:#29c770;font-size:1.35rem}
-.christmas-short{margin:0;font-size:.9rem;opacity:.85;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.christmas-short{
+    margin:0;
+    width:80%;
+    font-size:.9rem;
+    line-height:1.55;
+    opacity:.85;
+
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+
+    transition:max-height .22s ease, opacity .18s ease;
+}
+.desc-toggle{
+    align-self:flex-end;
+
+    font-size:.9rem;
+    font-weight:500;
+    color:#29c770;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+
+    text-decoration:underline;
+    opacity:.85;
+
+    transition:opacity .15s ease;
+}
+.desc-toggle:hover{
+    opacity:1;
+}
+
+.christmas-card.expanded .christmas-short{
+    -webkit-line-clamp:unset;
+    max-height:700px;
+    opacity:1;
+}
+
+.christmas-card.expanded .desc-toggle{
+    text-decoration:none;
+}
+
+.christmas-desc{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+}
+
+
 .christmas-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
 .christmas-card .book-btn{
     background:rgba(11,15,13,.55);

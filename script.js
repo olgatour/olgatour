@@ -547,3 +547,34 @@ if (langSwitch) {
     setTimeout(() => rebuildMarquee(), 50);
   });
 }
+// слушатель на ресайз
+document.addEventListener("click",e=>{
+    const toggle = e.target.closest(".desc-toggle");
+    const card   = e.target.closest(".christmas-card");
+
+    // Клик по кнопке
+    if(toggle && card){
+        e.stopPropagation();
+
+        // Закрываем все остальные карточки
+        document.querySelectorAll(".christmas-card.expanded").forEach(c=>{
+            if(c !== card){
+                c.classList.remove("expanded");
+                c.querySelector(".desc-toggle")?.setAttribute("aria-expanded","false");
+            }
+        });
+
+        const isOpen = card.classList.toggle("expanded");
+        toggle.setAttribute("aria-expanded", isOpen);
+
+        return;
+    }
+
+    // Клик вне карточек — закрываем всё
+    if(!card){
+        document.querySelectorAll(".christmas-card.expanded").forEach(c=>{
+            c.classList.remove("expanded");
+            c.querySelector(".desc-toggle")?.setAttribute("aria-expanded","false");
+        });
+    }
+});
