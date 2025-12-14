@@ -21,63 +21,21 @@ body.ready .text1{animation:rise .3s ease-out .06s both}body.ready .text2{animat
 .tours-preview{margin-top:0;position:relative;padding:10px 40px;background:none;color:#e7f2ec;font-family:"Nunito Sans",system-ui,sans-serif;overflow:hidden}
 .tours-inner{max-width:1400px;margin:0 auto}
 .tours-title{font:700 clamp(2.2rem,5vw,3rem) "Prata",serif;color:#29c770;margin-bottom:15px;text-shadow:0 0 6px rgba(41,199,112,.2)}
-
-/* 1. TOURS LAYOUT: Оставляем align-items: stretch для растяжения side-tours */
 .tours-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
-
-/* 2. SIDE TOURS: Занимает всю высоту Grid-ячейки и становится Flex-контейнером для карточек */
-.side-tours{
-    display:flex;
-    flex-direction:column;
-    gap:40px;
-    height: 100%; /* <-- НОВОЕ: Принудительно занимает всю высоту, предоставленную Grid (от высоты tour-card.big) */
-}
-
-/* 3. ОБЫЧНАЯ КАРТОЧКА (Small): Делит пространство поровну */
-/* Применяем к обеим маленьким карточкам внутри .side-tours */
-.tour-card.small {
-    flex-grow: 1; /* <-- НОВОЕ: Растягивается на свободное место */
-    flex-shrink: 1; /* <-- НОВОЕ: Можно сжиматься */
-    flex-basis: auto;
-    /* Убедимся, что сама карточка является Flex-контейнером, чтобы контент внутри был корректным */
-    display: flex;
-    flex-direction: column; 
-}
-
-/* 4. ИЗОБРАЖЕНИЕ В МАЛЕНЬКОЙ КАРТОЧКЕ: Фиксируем высоту */
-/* Изображение не должно растягиваться на 100% высоты .tour-card,
-   иначе оно вытеснит остальной контент. Задаем фиксированную высоту. */
-.tour-card img{
-    width:100%;
-    height: 160px; /* <-- ИЗМЕНЕНИЕ: Фиксируем высоту изображения, чтобы ограничить карточку */
-    object-fit:cover;
-    filter:brightness(.85);
-    transition:filter .18s ease-out
-}.tour-card:hover img{filter:brightness(1)}
-
-/* 5. ИНФОРМАЦИОННЫЙ БЛОК: Заставляем его занимать все оставшееся место */
-/* Убедимся, что инфо-блок заполняет свободное место, если Flex-родитель (card) работает */
-.tour-card .info{
-    padding:20px 24px 28px;
-    flex-grow: 1; /* <-- НОВОЕ: Занимает оставшееся место */
-    display: flex; /* <-- НОВОЕ: Чтобы содержимое info тоже было Flex */
-    flex-direction: column; 
-    justify-content: space-between; /* <-- НОВОЕ: Прижать кнопку/ссылку к низу */
-}
-
-
+.side-tours{display:flex;flex-direction:column;gap:40px;height:100%}
+.tour-card.small{flex-grow:1;flex-shrink:1;flex-basis:auto;display:flex;flex-direction:column}
+.tour-card img{width:100%;height:160px;object-fit:cover;filter:brightness(.85);transition:filter .18s ease-out}
+.tour-card:hover img{filter:brightness(1)}
+.tour-card .info{padding:20px 24px 28px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between}
 /* --- КОНТЕКСТ ДЛЯ БОЛЬШОЙ КАРТОЧКИ --- */
-
 .tour-card{background:rgba(11,15,13,.65);border:1px solid rgba(41,199,112,.15);border-radius:22px;box-shadow:0 2px 6px rgba(0,0,0,.22);overflow:hidden;transition:transform .18s ease-out,border-color .18s ease-out;cursor:pointer}.tour-card:hover{transform:translateY(-2px);border-color:rgba(41,199,112,.35)}
 .tour-card h3{color:#29c770;font-family:"Prata",serif;font-weight:700;font-size:1.2rem;margin:0 0 8px}
 .tour-card p{color:rgba(231,242,236,.85);font-size:.8rem;line-height:1.5}
-
 .tour-card.big{display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(11,15,13,.8);box-shadow:0 3px 10px rgba(0,0,0,.24)}
 .tour-card.big img{width:100%;height:400px;object-fit:cover;filter:brightness(.85);transition:filter .18s ease-out}.tour-card.big:hover img{filter:brightness(1)}
 .tour-card.big .info{padding:24px 32px;animation:fadeUp .3s ease-out both}
 .tour-card.big h3{color:#29c770;font-family:"Prata";font-weight:700;font-size:1.2rem;margin-bottom:10px}
 .tour-card.big .desc{font-size:.8rem;line-height:1.6;color:rgba(231,242,236,.9);max-width:600px;margin-bottom:20px}
-
 /* --- КНОПКИ --- */
 .book-btn,.more-btn{display:inline-flex;align-items:center;justify-content:center;background:rgba(11,15,13,.55);border:2px solid rgba(41,199,112,.4);color:#e7f2ec;text-decoration:none;transition:transform .18s ease-out,border-color .18s ease-out,color .18s ease-out;box-shadow:0 2px 6px rgba(0,0,0,.22)}
 .book-btn{padding:10px 28px;border-radius:30px;font:600 .95rem "Nunito Sans"}

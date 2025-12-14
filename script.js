@@ -194,7 +194,7 @@ const i18n = {
     alt_connemara_winter: "Connemara National Park Winter",
     xmas_tour1_type: "Wilderness Trek",
     xmas_tour1_title: "Connemara Winter Hike",
-    xmas_tour1_desc: "National Park Peaks • Diamond Hill Trails • Fireside Lunch • Panoramic Vistas",
+    xmas_tour1_desc: "Immerse yourself in the wild beauty of Connemara National Park, where sweeping mountains, shimmering lakes, and vast boglands create some of Ireland’s most breathtaking landscapes. Enjoy scenic trails and panoramic views that capture the essence of the west",
     xmas_tour1_old_hint: "Regular Price",
     xmas_tour1_new_price: "✨ Tailored Experience",
     
@@ -202,7 +202,7 @@ const i18n = {
     alt_kylemore_xmas: "Kylemore Abbey Christmas",
     xmas_tour2_type: "Historical Holiday",
     xmas_tour2_title: "Kylemore Abbey Experience",
-    xmas_tour2_desc: "Gothic Castle Visit • Walled Garden • Christmas Choir Event • Private Afternoon Tea",
+    xmas_tour2_desc: "Then, step into the fairytale setting of Kylemore Abbey, a stunning 19th-century castle nestled on the shores of a tranquil lake. Discover its romantic history, stroll through the Victorian Walled Garden, and feel the peaceful atmosphere of this remarkable place. This journey blends natural wonders with cultural heritage for an unforgettable Irish experience",
     xmas_tour2_old_hint: "Starts from €450",
     xmas_tour2_new_price: "🌿 Price Upon Request",
   },
@@ -336,7 +336,7 @@ const i18n = {
     alt_connemara_winter: "Национальный парк Коннемара зимой",
     xmas_tour1_type: "Дикий Поход",
     xmas_tour1_title: "Зимний Поход по Коннемара",
-    xmas_tour1_desc: "Пики Национального Парка • Тропы Даймонд Хилл • Обед у камина • Панорамные зимние виды",
+    xmas_tour1_desc: "Погрузитесь в дикую красоту Национального парка Коннемара, где величественные горы, мерцающие озера и обширные торфяники создают одни из самых захватывающих пейзажей Ирландии. Насладитесь живописными маршрутами и панорамными видами, которые передают саму суть западного побережья",
     xmas_tour1_old_hint: "Стандартная Цена",
     xmas_tour1_new_price: "✨ Индивидуальный Расчет",
     
@@ -344,7 +344,7 @@ const i18n = {
     alt_kylemore_xmas: "Аббатство Кайлмор на Рождество",
     xmas_tour2_type: "Исторический Отпуск",
     xmas_tour2_title: "Тур по Аббатству Кайлмор",
-    xmas_tour2_desc: "Посещение Готического Замка • Обнесенный стеной сад • Рождественский хор • Частное чаепитие",
+    xmas_tour2_desc: "Затем окунитесь в сказочную атмосферу Аббатства Кайлмор — потрясающего замка XIX века, расположенного на берегу тихого озера. Откройте для себя его романтическую историю, прогуляйтесь по Викторианскому саду с каменными стенами и ощутите мирную атмосферу этого удивительного места. Это путешествие сочетает природные чудеса и культурное наследие, делая его незабываемым ирландским опытом",
     xmas_tour2_old_hint: "Цена от €450",
     xmas_tour2_new_price: "🌿 Цена По Запросу",
   }
