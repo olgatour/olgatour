@@ -79,11 +79,11 @@ const i18n = {
     /* TOURS PREVIEW (index) */
     tours_preview_title: "POPULAR TOURS",
     tour_killarney_title: "Killarney",
-    tour_killarney_desc: "Killarney County Kerry — a journey through Ireland’s most magical landscapes.",
+    tour_killarney_desc: "Killarney County Kerry. At the start of the journey, you will hear ancient legends of the Shannon River Bay. Visit the mysterious Ross Castle and sail across Lake Killarney, where an underwater kingdom is said to lie hidden. Continue to a historic abbey known as the “living heart” and finish in the breathtaking Killarney National Park — one of Ireland’s most beautiful natural treasures.",
     tour_cork_title: "Cork & Titanic",
-    tour_cork_desc: "Walk through history — from Elizabeth Fort to the Titanic Museum.",
+    tour_cork_desc: "Discover Cork and Titanic Heritage Tour. Walk through the historic streets of Cork, explore Elizabeth Fort, and experience the vibrant atmosphere of the English Market. Continue to the coastal town of Cobh, home to the Titanic Museum, and visit Ireland’s highest cathedral overlooking the harbor. A journey through history, culture, and iconic landmarks.",
     tour_dingle_title: "Dingle Peninsula",
-    tour_dingle_desc: "Rugged cliffs and wild Atlantic views.",
+    tour_dingle_desc: "Discover the breathtaking Dingle Peninsula, where rugged cliffs meet the wild Atlantic. Drive along scenic coastal roads, explore the colorful town of Dingle, and admire iconic locations like Slea Head Drive and the Blasket Islands. A perfect blend of dramatic nature, ancient history, and unforgettable coastal views.",
     btn_readmore: "Read More",
     btn_viewall: "View All Tours",
 
@@ -154,17 +154,17 @@ const i18n = {
 
     /* SHORT ROUTES (from tours.html cards) */
     tour_kells_title: "Book of Kells",
-    tour_kells_route: "Book of Kells · island of origin · medieval abbey · Trinity College · Long Room Library · illuminated manuscript",
-    tour_killarney_route: "Killarney 1 day tour · Ring of Kerry · Ross Castle · Old Abbey · Muckross House · Killarney National Park",
-    tour_cork_route: "Cork walking tour · Elizabeth Fort · English Market · Cobh · Titanic Museum · Ireland’s highest cathedral · D. Kennedy’s town",
-    tour_connemara_route: "Connemara National Park · scenic trails · panoramic viewpoints · Kylemore Abbey · Victorian Walled Garden",
-    tour_dingle_route: "Dingle town · Dingle Bay · Slea Head Drive · Gallarus Oratory · Blasket Islands · ancient forts & standing stones",
+    tour_kells_route: "Discover the ancient beauty of the Book of Kells, one of Ireland's most precious treasures. This full-day journey takes you to Trinity College where you'll see the magnificently illuminated medieval manuscript. Explore the island of origin and wander through the medieval abbey that once protected this masterpiece. Visit the historic Long Room Library and immerse yourself in centuries of Irish heritage.",
+    tour_killarney_route: "Experience the natural splendor of Kerry's most scenic regions. This adventure circles the famous Ring of Kerry, featuring stunning mountain views and coastal vistas. Visit the impressive Ross Castle perched on Lough Leane, explore an old abbey rich with history, and tour the elegant Muckross House estate. Discover why Killarney National Park is one of Ireland's most beloved destinations, with pristine lakes and verdant valleys.",
+    tour_cork_route: "Uncover the vibrant character of Cork through this guided walking tour. Explore the historic Elizabeth Fort with panoramic city views, browse the eclectic stalls of the traditional English Market, and visit charming Cobh, birthplace of countless Irish emigrants. Discover the moving Titanic Museum, marvel at Ireland's highest cathedral, and walk through the town immortalized in President D. Kennedy's heritage.",
+    tour_connemara_route: "Immerse yourself in Connemara's wild, untamed beauty. This expedition through Connemara National Park showcases dramatic mountain peaks, serene lakes, and rolling moorlands. Walk scenic trails and enjoy panoramic viewpoints that reveal the region's rugged splendor. Visit the magnificent Kylemore Abbey nestled in a valley, and stroll through its beautifully preserved Victorian Walled Garden.",
+    tour_dingle_route: "Journey to one of Ireland's most enchanting towns. Dingle offers colorful streets, vibrant culture, and stunning harbor views over Dingle Bay. Drive the spectacular Slea Head Drive with cliff-hugging roads and breathtaking Atlantic vistas. Explore the mysterious Gallarus Oratory, an ancient stone church, and visit the nearby Blasket Islands. Discover ancient forts and standing stones that whisper tales of Ireland's Celtic past.",
 
     /* FULL DESCRIPTIONS (all 1:1 your text) */
     tour_killarney_full_desc: "Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay. We will visit an incredible and mysterious place – Ross Castle. From the castle we will sail on a boat across Lake Killarney, at the bottom of which, according to legend, an entire underwater kingdom is hidden. We will continue our journey to the mysterious abbey, which houses the “living heart”. At the end of the trip we will visit one of the most beautiful, popular and largest parks in Ireland – Killarney National Park. The journey will be seasoned with real ancient Irish legends. Let your journey begin with us.",
     tour_cork_full_title: "Cork and Titanic experience",
     tour_cork_full_desc: "Discover the Cork and Titanic Heritage Tour. Step into the rich history of Cork on this captivating journey. Begin with a Cork walking tour, exploring charming streets, Elizabeth Fort and learning about the fascinating origins of this great city. Experience the lively atmosphere of the English Market, a food lover’s paradise. Continue to the picturesque town of Cobh, home to the famous Titanic Museum, where the final chapter of the great ship’s story unfolds. Visit Ireland’s highest cathedral, a stunning masterpiece overlooking the harbor. On the way, enjoy the scenic charm of D. Kennedy’s town, filled with coastal beauty and local character.",
-    tour_connemara_title: "Connemara & Kylemore Abbey",
+    tour_connemara_title: "Connemara & Kylemore",
     tour_connemara_full_desc: "Connemara National Park & Kylemore Abbey Tour. Immerse yourself in the wild beauty of Connemara National Park, where sweeping mountains, shimmering lakes and vast boglands create some of Ireland’s most breathtaking landscapes. Enjoy scenic trails and panoramic views that capture the essence of the west. Then, step into the fairytale setting of Kylemore Abbey, a stunning 19th-century castle nestled on the shores of a tranquil lake. Discover its romantic history, stroll through the Victorian Walled Garden and feel the peaceful atmosphere of this remarkable place. This journey blends natural wonders with cultural heritage for an unforgettable Irish experience.",
     tour_dingle_full_title: "Dingle peninsula",
     tour_dingle_full_desc: "Discover the breathtaking Dingle Peninsula, where rugged cliffs meet the wild Atlantic, charming villages dot the coastline and ancient history whispers from every corner. Drive along winding coastal roads with panoramic views, explore the colourful town of Dingle with its lively pubs and artisan shops and spot playful dolphins in Dingle Bay. Marvel at unforgettable spots like Slea Head Drive, Gallarus Oratory and the Blasket Islands, and wander through unique landscapes dotted with ancient forts, standing stones and hidden beaches. This tour offers a perfect mix of adventure, culture and unforgettable scenery.",
@@ -173,7 +173,7 @@ const i18n = {
     promo_special_offer: "SPECIAL OFFER OF THE MONTH",
     promo_special_tag: "Special offer — 3 nights",
     promo_marquee: "— Special offer — Killarney — Limited Offer — ",
-    promo_killarney_desc: "Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay.We will visit an incredible and mysterious place – Ross Castle... The journey will be “seasoned” with real ancient Irish legends.",
+    promo_killarney_desc: "Killarney County Kerry. At the beginning of our journey you will hear the secrets and legends of the Shannon River Bay. We will visit an incredible and mysterious place – Ross Castle. From the castle we will sail on a boat across Lake Killarney, at the bottom of which, according to legend, an entire underwater kingdom is hidden. We will continue our journey to the mysterious abbey, which houses the \"living heart\". At the end of the trip we will visit one of the most beautiful, popular, and largest parks in Ireland – Killarney National Park. The journey will be \"seasoned\" with real ancient Irish legends. So, let your journey begin with us.",
     old_price: "Regular Price",
     new_price1: "🌿 Price Upon Request",
     new_price2: "🔍 Personalised Offer",
@@ -186,6 +186,10 @@ const i18n = {
     copy: "© Olgatour, 2025",
     xmas_title: "🎄 CHRISTMAS TOURS SALE 🎄",
     xmas_sub: "Limited offers — December 15 — January 10",
+    
+    // --- TEXT TOGGLE ---
+    show_more: "Read more",
+    show_less: "Show less",
     
     // --- КНОПКА ---
     btn_book: "Book",
@@ -222,11 +226,11 @@ const i18n = {
     /* TOURS PREVIEW (index) */
     tours_preview_title: "ПОПУЛЯРНЫЕ ТУРЫ",
     tour_killarney_title: "Килларни",
-    tour_killarney_desc: "Килларни, графство Керри — путешествие по самым волшебным пейзажам Ирландии.",
+    tour_killarney_desc: "Графство Керри, Килларни. В начале путешествия вы услышите древние легенды залива реки Шеннон. Мы посетим таинственный замок Росс и проплывём по озеру Килларни, где, по легенде, скрыто подводное королевство. Затем отправимся к древнему аббатству — «живому сердцу» Ирландии — и завершим маршрут в национальном парке Килларни, одном из самых красивых мест страны.",
     tour_cork_title: "Корк и Титаник",
-    tour_cork_desc: "Прогулка по истории — от Elizabeth Fort до музея Titanic в Коубе.",
+    tour_cork_desc: "Откройте для себя тур «Корк и Титаник». Прогуляйтесь по историческим улицам Корка, посетите форт Элизабет и атмосферный Английский рынок. Затем отправьтесь в прибрежный город Коб, где расположен музей Титаника, и посетите самый высокий собор Ирландии с видом на гавань. Путешествие сквозь историю и знаковые места.",
     tour_dingle_title: "Полуостров Дингл",
-    tour_dingle_desc: "Скалы, океан и атмосферный город Дингл.",
+    tour_dingle_desc: "Суровые скалы встречаются с Атлантикой на полуострове Дингл. Проедьте живописные прибрежные дороги, исследуйте красочный город с пабами и лавками, понаблюдайте за дельфинами и откройте для себя легендарные места — Слиа-Хед и ораторий Галларус.",
     btn_readmore: "Подробнее",
     btn_viewall: "Все туры",
 
@@ -295,11 +299,11 @@ const i18n = {
 
     /* SHORT ROUTES */
     tour_kells_title: "Книга Келлсов",
-    tour_kells_route: "Книга Келлсов · остров происхождения · средневековое аббатство · Тринити-колледж · библиотека Long Room · иллюминированный манускрипт",
-    tour_killarney_route: "Однодневный тур по Килларни · Кольцо Керри · замок Росс · старое аббатство · усадьба Макросс · национальный парк Килларни",
-    tour_cork_route: "Пешеходная экскурсия по Корку · Elizabeth Fort · English Market · город Коуб · музей Титаника · самый высокий собор Ирландии · город Д. Кеннеди",
-    tour_connemara_route: "Нац.парк Коннемара · смотровые площадки · пешеходные тропы · аббатство Кайломор · викторианский сад",
-    tour_dingle_route: "Город Дингл · залив Дингл · Slea Head Drive · Gallarus Oratory · острова Бласкет · древние форты и камни",
+    tour_kells_route: "Откройте для себя древнее великолепие Книги Келлсов, одного из самых драгоценных сокровищ Ирландии. Это путешествие на весь день доставит вас в Тринити-колледж, где вы увидите великолепно иллюминированный средневековый манускрипт. Исследуйте остров происхождения и блуждайте по средневековому аббатству, которое когда-то защищало этот шедевр. Посетите историческую библиотеку Long Room и погрузитесь в столетия ирландского наследия.",
+    tour_killarney_route: "Ощутите естественное великолепие самых живописных регионов Керри. Это приключение обходит знаменитое кольцо Керри с потрясающими видами на горы и побережье. Посетите впечатляющий замок Росс на берегу озера Лоу Лейн, исследуйте старое аббатство, богатое историей, и туристический элегантный особняк Макросс. Откройте для себя, почему национальный парк Килларни является одним из самых любимых направлений Ирландии с чистыми озерами и зелеными долинами.",
+    tour_cork_route: "Откройте для себя яркий характер Корка через эту экскурсию пешком. Исследуйте исторический форт Elizabeth Fort с панорамными видами на город, посетите эклектичные прилавки традиционного English Market и посетите очаровательный город Коуб, родину бесчисленных ирландских эмигрантов. Откройте для себя трогательный музей Титаника, удивитесь самому высокому собору Ирландии и прогуляйтесь по городу, увековеченному в наследии президента Д. Кеннеди.",
+    tour_connemara_route: "Погрузитесь в дикую, неукротимую красоту Коннемары. Эта экспедиция через национальный парк Коннемара демонстрирует драматические горные вершины, спокойные озера и волнистые пустоши. Прогуляйтесь по живописным тропам и наслаждайтесь смотровыми площадками с панорамным видом, которые открывают суровое великолепие региона. Посетите великолепное аббатство Кайломор, спрятанное в долине, и прогуляйтесь по его прекрасно сохранившемуся викторианскому саду.",
+    tour_dingle_route: "Путешествуйте в один из самых чаровательных городов Ирландии. Дингл предлагает красочные улицы, бурную культуру и потрясающие виды на гавань через залив Дингл. Проедьте по спектакулярному маршруту Slea Head Drive с дорогами на краю скалы и захватывающими видами на Атлантику. Исследуйте таинственное Gallarus Oratory, древнюю каменную церковь, и посетите близлежащие острова Бласкет. Откройте для себя древние форты и стоящие камни, которые шепчут истории о кельтском прошлом Ирландии.",
 
     /* FULL DESCRIPTIONS (1:1 your text) */
     tour_killarney_full_desc: "Килларни, графство Керри. В начале нашего путешествия вы услышите легенды и истории залива реки Шаннон. Мы посетим удивительное и загадочное место — замок Росс. Оттуда отправимся на лодочную прогулку по озеру Килларни, на дне которого, по легенде, скрыто целое подводное королевство. Затем продолжим путь к таинственному аббатству, где хранится «живое сердце». В конце поездки мы посетим один из самых красивых и известных парков Ирландии — национальный парк Килларни. Путешествие будет приправлено настоящими древними ирландскими легендами. Пусть ваше приключение начнётся с нами.",
@@ -314,7 +318,7 @@ const i18n = {
     promo_special_offer: "СПЕЦПРЕДЛОЖЕНИЕ МЕСЯЦА",
     promo_special_tag: "Спецпредложение — 3 ночи",
     promo_marquee: "— Special offer — Killarney — Limited Offer — ",
-    promo_killarney_desc: "Килларни, графство Керри. В начале нашего путешествия вы услышите легенды и истории залива реки Шаннон. Мы посетим удивительное и загадочное место — замок Росс... Путешествие будет приправлено настоящими древними ирландскими легендами.",
+    promo_killarney_desc: "Графство Килларни, Керри. В начале нашего путешествия вы услышите тайны и легенды залива реки Шаннон. Мы посетим невероятное и загадочное место — замок Росс. От замка мы отправимся на лодке по озеру Килларни, на дне которого, по легенде, скрыто целое подводное королевство. Далее наш путь продолжится к таинственному аббатству, в котором хранится \"живое сердце\". В завершение путешествия мы посетим один из самых красивых, популярных и крупнейших парков Ирландии — Национальный парк Килларни. Это путешествие будет \"приправлено\" настоящими древними ирландскими легендами. Что ж, пусть ваше путешествие начнётся вместе с нами.",
     old_price: "Стандартная цена",
     new_price1: "🌿 По запросу",
     new_price2: "🔍 Индивидуально",
@@ -328,6 +332,10 @@ const i18n = {
     // --- ОСНОВНАЯ СЕКЦИЯ ---
     xmas_title: "🎄 НОВОГОДНЯЯ РАСПРОДАЖА ТУРОВ 🎄",
     xmas_sub: "Ограниченные предложения — 15 Декабря — 10 Января",
+    
+    // --- TEXT TOGGLE ---
+    show_more: "Подробнее",
+    show_less: "Скрыть",
     
     // --- КНОПКА ---
     btn_book: "Забронировать",
@@ -550,31 +558,58 @@ if (langSwitch) {
 // слушатель на ресайз
 document.addEventListener("click",e=>{
     const toggle = e.target.closest(".desc-toggle");
-    const card   = e.target.closest(".christmas-card");
+    const card   = e.target.closest(".christmas-card, .tour-card, .tp-card");
 
     // Клик по кнопке
     if(toggle && card){
         e.stopPropagation();
 
         // Закрываем все остальные карточки
-        document.querySelectorAll(".christmas-card.expanded").forEach(c=>{
+        document.querySelectorAll(".christmas-card.expanded, .tour-card.expanded, .tp-card.expanded").forEach(c=>{
             if(c !== card){
                 c.classList.remove("expanded");
-                c.querySelector(".desc-toggle")?.setAttribute("aria-expanded","false");
+                const otherToggle = c.querySelector(".desc-toggle");
+                otherToggle?.setAttribute("aria-expanded","false");
+                otherToggle?.setAttribute("data-i18n","show_more");
+                otherToggle.textContent = i18n[localStorage.getItem("lang") || "en"].show_more;
             }
         });
 
         const isOpen = card.classList.toggle("expanded");
         toggle.setAttribute("aria-expanded", isOpen);
+        
+        // Update button text based on state
+        const currentLang = localStorage.getItem("lang") || "en";
+        if(isOpen){
+            toggle.setAttribute("data-i18n","show_less");
+            toggle.textContent = i18n[currentLang].show_less;
+        } else {
+            toggle.setAttribute("data-i18n","show_more");
+            toggle.textContent = i18n[currentLang].show_more;
+        }
 
         return;
     }
 
     // Клик вне карточек — закрываем всё
     if(!card){
-        document.querySelectorAll(".christmas-card.expanded").forEach(c=>{
+        document.querySelectorAll(".christmas-card.expanded, .tour-card.expanded, .tp-card.expanded").forEach(c=>{
             c.classList.remove("expanded");
-            c.querySelector(".desc-toggle")?.setAttribute("aria-expanded","false");
+            const closingToggle = c.querySelector(".desc-toggle");
+            closingToggle?.setAttribute("aria-expanded","false");
+            closingToggle?.setAttribute("data-i18n","show_more");
+            closingToggle.textContent = i18n[localStorage.getItem("lang") || "en"].show_more;
         });
     }
 });
+
+// Touch zoom for tour cards - lightweight hover effect on touch
+document.addEventListener("touchstart", e => {
+    const card = e.target.closest(".tour-card, .tp-card");
+    if(card) card.classList.add("touch-zoom");
+}, {passive: true});
+
+document.addEventListener("touchend", e => {
+    const card = e.target.closest(".tour-card, .tp-card");
+    if(card) card.classList.remove("touch-zoom");
+}, {passive: true});

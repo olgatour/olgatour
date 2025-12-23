@@ -66,29 +66,43 @@
 }
 
 /*============ TOURS BASE ============*/
+@media(max-width:1200px){
+    .tours-preview-cards{gap:16px}
+    .tp-card--left,.tp-card--right{width:280px}
+    .tp-card--center{width:340px}
+    .tp-card--center .tp-card__media{height:380px}
+    .tp-card__media{height:320px}
+}
+
 @media(max-width:1000px){
-    .tours-layout{grid-template-columns:1fr}
-    .side-tours{flex-direction:row;gap:20px}
-    .tour-card.small img{height:180px}
-    .tour-card.big img{height:320px}
-    .tour-card.big .info{padding:25px}
-    /* Удалены все hover эффекты */
+    .tours-preview-cards{gap:14px}
+    .tp-card--left,.tp-card--right{width:260px}
+    .tp-card--center{width:300px}
+    .tp-card--center .tp-card__media{height:340px}
+    .tp-card__media{height:300px}
 }
 
 @media(max-width:768px){
-    /* Скорректированные стили для tour-card */
-    .tour-card{
-        border-radius:16px;
-        box-shadow:0 2px 8px rgba(0,0,0,.2); /* Уменьшена тень */
-    }
-    .tour-card .info{padding:16px 18px 20px}
-    .tour-card h3{font-size:1.15rem;margin-bottom:6px}
-    .tour-card p{font-size:.85rem;line-height:1.45}
-    .tour-card.small img{height:160px}
-    .tour-card.big img{height:320px}
-    .tour-card.big .info{padding:20px 24px}
-    .tour-card.big h3{font-size:1.35rem}
-    .tour-card.big .desc{font-size:.9rem;line-height:1.45;max-width:520px}
+    /* Mobile: Stack vertically, center card first, no stagger */
+    .tours-preview{padding:16px 16px}
+    .tours-preview-cards{flex-direction:column;gap:16px;align-items:center}
+    
+    /* All cards same width on mobile */
+    .tp-card{width:100%;max-width:380px;transform:translateY(0)!important}
+    .tp-card--left,.tp-card--right,.tp-card--center{width:100%;max-width:380px;transform:translateY(0)!important}
+    
+    /* Mobile image height */
+    .tp-card__media{height:240px}
+    .tp-card--center .tp-card__media{height:240px}
+    
+    /* Mobile overlay padding */
+    .tp-card__overlay{padding:20px 18px}
+    
+    /* Mobile typography */
+    .tp-card__title{font-size:1.1rem;margin-bottom:10px}
+    .tp-card--center .tp-card__title{font-size:1.1rem}
+    .tp-desc__text{font-size:.8rem;width:95%;max-width:95%}
+    .desc-toggle{font-size:.75rem}
 
     .why-title,.contacts-title{text-align:center!important}
     .contacts-section{padding:35px 20px!important}
@@ -203,9 +217,20 @@
 
 /*============ GRID 4→1 ============*/
 @media(max-width:768px){
-    .tours-grid{grid-template-columns:1fr!important;gap:20px!important}
+    .tours-page .tours-grid{
+        display:flex !important;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+
+    .tours-page .tour-card{
+        width:100%;
+        max-width:360px;
+    }
+
     .old-price,.tour-price{text-align: center;}
-    .tour-img{height:200px!important}
+    .tour-card-img{height:200px!important}
 }
 
 @media(max-width:768px){
@@ -248,16 +273,21 @@
 /*============ HOLIDAYS V1 MOBILE ============*/
 @media(max-width:768px){
     .christmas-wrapper{padding:80px 20px 40px;}
-    .christmas-title{font-size:2.2rem!important; margin-bottom:15px; text-shadow:0 0 3px rgba(41,199,112,.15);} /* Уменьшено свечение */
+    .christmas-title{font-size:2.2rem!important; margin-bottom:15px; text-shadow:0 0 3px rgba(41,199,112,.15);}
     .christmas-sub{margin-bottom:25px;}
 
-    .christmas-grid{
-        grid-template-columns:1fr!important;
+    .christmas-wrapper .christmas-grid{
+        display:flex !important;
+        flex-direction:column;
+        align-items:center;
         gap:22px;
+        grid-template-columns:unset !important;
     }
-    .christmas-card{
-        max-width:100%;
-        transform:none!important; /* Отключение hover transform */
+
+    .christmas-wrapper .christmas-card{
+        width:100%;
+        max-width:360px;
+        transform:none!important;
     }
     /* Удалены все :hover стили для .christmas-card и его элементов */
     .christmas-card-inner {

@@ -18,24 +18,47 @@
 .button1{margin-top:2rem}.button1 button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 36px;background:rgba(11,15,13,.45);border:2px solid rgba(41,199,112,.4);border-radius:50px;color:#e7f2ec;font:600 1rem "Nunito Sans";letter-spacing:.5px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);transition:transform .18s ease-out,border-color .18s ease-out,color .18s ease-out}.button1 button:hover{border-color:#29c770;color:#29c770;transform:translateY(-1px)}
 @keyframes colorBreath{0%,100%{color:#e7f2ec}50%{color:#29c770}}@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 body.ready .text1{animation:rise .3s ease-out .06s both}body.ready .text2{animation:rise .33s ease-out .12s both}body.ready .text3{animation:rise .33s ease-out .18s both,colorBreath 3.2s ease-in-out 1.2s infinite}body.ready .button1{animation:rise .28s ease-out .22s both}
-.tours-preview{margin-top:0;position:relative;padding:10px 40px;background:none;color:#e7f2ec;font-family:"Nunito Sans",system-ui,sans-serif;overflow:hidden}
+.tours-preview{margin-top:0;position:relative;padding:20px 40px;background:none;color:#e7f2ec;font-family:"Nunito Sans",system-ui,sans-serif;overflow:visible}
 .tours-inner{max-width:1400px;margin:0 auto}
-.tours-title{font:700 clamp(2.2rem,5vw,3rem) "Prata",serif;color:#29c770;margin-bottom:15px;text-shadow:0 0 6px rgba(41,199,112,.2)}
-.tours-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
-.side-tours{display:flex;flex-direction:column;gap:40px;height:100%}
-.tour-card.small{flex-grow:1;flex-shrink:1;flex-basis:auto;display:flex;flex-direction:column}
-.tour-card img{width:100%;height:160px;object-fit:cover;filter:brightness(.85);transition:filter .18s ease-out}
-.tour-card:hover img{filter:brightness(1)}
-.tour-card .info{padding:20px 24px 28px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between}
-/* --- КОНТЕКСТ ДЛЯ БОЛЬШОЙ КАРТОЧКИ --- */
-.tour-card{background:rgba(11,15,13,.65);border:1px solid rgba(41,199,112,.15);border-radius:22px;box-shadow:0 2px 6px rgba(0,0,0,.22);overflow:hidden;transition:transform .18s ease-out,border-color .18s ease-out;cursor:pointer}.tour-card:hover{transform:translateY(-2px);border-color:rgba(41,199,112,.35)}
-.tour-card h3{color:#29c770;font-family:"Prata",serif;font-weight:700;font-size:1.2rem;margin:0 0 8px}
-.tour-card p{color:rgba(231,242,236,.85);font-size:.8rem;line-height:1.5}
-.tour-card.big{display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(11,15,13,.8);box-shadow:0 3px 10px rgba(0,0,0,.24)}
-.tour-card.big img{width:100%;height:400px;object-fit:cover;filter:brightness(.85);transition:filter .18s ease-out}.tour-card.big:hover img{filter:brightness(1)}
-.tour-card.big .info{padding:24px 32px;animation:fadeUp .3s ease-out both}
-.tour-card.big h3{color:#29c770;font-family:"Prata";font-weight:700;font-size:1.2rem;margin-bottom:10px}
-.tour-card.big .desc{font-size:.8rem;line-height:1.6;color:rgba(231,242,236,.9);max-width:600px;margin-bottom:20px}
+.tours-title{font:700 clamp(2.2rem,5vw,3rem) "Prata",serif;color:#29c770;margin-bottom:30px;text-shadow:0 0 6px rgba(41,199,112,.2)}
+
+/* Card Grid Layout - 3 Vertical Cards in Row */
+.tours-preview-cards{display:flex;flex-direction:row;gap:24px;align-items:flex-end;justify-content:center;flex-wrap:nowrap;height:auto}
+
+/* Individual Card Styling */
+.tp-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.25);cursor:pointer;transition:transform .24s cubic-bezier(.25,.46,.45,.94);height:auto;flex:0 0 auto}
+
+/* Card Image - Full Cover */
+.tp-card__media{width:100%;height:380px;object-fit:cover;display:block;transition:transform .32s cubic-bezier(.25,.46,.45,.94)}
+@media (hover:hover){.tp-card:hover .tp-card__media{transform:scale(1.04)}}
+.tp-card.touch-zoom .tp-card__media{transform:scale(1.04)}
+
+/* Card Overlay - Gradient + Content */
+.tp-card__overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(11,15,13,.85) 50%,rgba(11,15,13,.95) 100%);overflow:hidden}
+
+/* Card Title */
+.tp-card__title{color:#29c770;font-family:"Prata",serif;font-weight:700;font-size:1.25rem;margin:0 0 12px;line-height:1.2}
+
+/* Description Block with Read More */
+.tp-desc{width:100%;display:flex;flex-direction:column;gap:8px;flex:0 0 auto}
+.tp-desc__text{color:rgba(231,242,236,.85);font-size:.85rem;line-height:1.5;margin:0;padding:0;width:90%;max-width:90%;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;transition:max-height .28s ease-out}
+
+/* Read More Button */
+.desc-toggle{align-self:flex-start;padding:0;font-size:.8rem;font-weight:500;color:#29c770;background:none;border:none;cursor:pointer;text-decoration:underline;opacity:.85;transition:opacity .15s ease-out}
+.desc-toggle:hover,.desc-toggle:active{opacity:1}
+
+/* Expanded State */
+.tp-card.expanded .tp-desc__text{-webkit-line-clamp:unset;overflow:visible;max-height:none}
+.tp-card.expanded .desc-toggle{text-decoration:none}
+
+/* Side Card Styling */
+.tp-card--left,.tp-card--right{width:300px;transform:translateY(24px)}
+
+/* Center Card - Dominant */
+.tp-card--center{width:380px;transform:translateY(-12px)}
+.tp-card--center .tp-card__media{height:420px}
+.tp-card--center .tp-card__title{font-size:1.35rem;margin-bottom:14px}
+
 /* --- КНОПКИ --- */
 .book-btn,.more-btn{display:inline-flex;align-items:center;justify-content:center;background:rgba(11,15,13,.55);border:2px solid rgba(41,199,112,.4);color:#e7f2ec;text-decoration:none;transition:transform .18s ease-out,border-color .18s ease-out,color .18s ease-out;box-shadow:0 2px 6px rgba(0,0,0,.22)}
 .book-btn{padding:10px 28px;border-radius:30px;font:600 .95rem "Nunito Sans"}
@@ -99,7 +122,7 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .tours-inner{max-width:1400px;margin:0 auto}
 .tours-title{text-align:center;font:700 3rem "Prata",serif;color:#29c770;margin-bottom:30px;text-shadow:0 0 10px rgba(41,199,112,.25)}
 .tours-list{display:flex;flex-direction:column;gap:30px}
-.tours-grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.tours-grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:start}
 .modal{position:fixed;inset:0;display:none;justify-content:center;align-items:center;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:9999}.modal.active{display:flex}
 .modal-content{background:rgba(11,15,13,.9);border:1px solid rgba(41,199,112,.25);padding:30px;width:380px;border-radius:22px;font-family:"Nunito Sans",system-ui,sans-serif;color:#e7f2ec;position:relative;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 .modal-content input,.modal-content textarea{width:100%;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(41,199,112,.25);color:#fff;margin-bottom:14px}.modal-content textarea{height:80px;resize:none}
@@ -109,12 +132,11 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .toast.success{border-left:4px solid #29c770}.toast.error{border-left:4px solid #e14e4e}
 .toast span.icon{font-size:1.2rem}
 @keyframes toastIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}@keyframes toastOut{to{opacity:0;transform:translateX(20px)}}
-.tour-img{position:relative;height:180px;overflow:hidden}
-.tour-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:filter .18s ease-out}
-.tour-card:hover img{filter:brightness(1)}
+.tour-card-img{position:relative;width:100%;height:180px;object-fit:cover;filter:brightness(.85);transition:filter .18s ease-out;display:block}
+.tour-card:hover .tour-card-img{filter:brightness(1)}
 .tour-tag{position:absolute;top:12px;left:12px;padding:6px 12px;font-size:.75rem;border-radius:14px;background:rgba(41,199,112,.35);color:#e7f2ec;font-weight:600}
-.tour-info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
-.tour-info h3{margin:0;font-family:"Prata",serif;font-weight:700;font-size:1.2rem;color:#29c770}
+.tour-card-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
+.tour-card h3{margin:0;font-family:"Prata",serif;font-weight:700;font-size:1.2rem;color:#29c770}
 .tour-short{margin:0;color:rgba(231,242,236,.85);font-size:.8rem;line-height:1.5;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .tour-rating{display:flex;align-items:center;gap:6px}
 .tour-rating .stars{font-size:.78rem;letter-spacing:1px;color:rgba(41,199,112,.9);text-shadow:0 0 8px rgba(41,199,112,.35)}
@@ -122,12 +144,9 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
 .price-box{display:flex;flex-direction:column}
 .old-price{margin-bottom:.2rem;font-size:.65rem;color:rgba(231,242,236,.5);text-decoration:line-through}
 .tour-price{font-size:.75rem;font-weight:700;color:#e7f2ec}
-.tour-bottom{margin-top:14px;display:flex;justify-content:space-between;align-items:center}
+.tour-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
 .book-btn.small{padding:8px 18px;font-size:.8rem;border-radius:24px;border:2px solid rgba(41,199,112,.4);background:rgba(11,15,13,.55);color:#e7f2ec;transition:transform .18s ease-out,border-color .18s ease-out,color .18s ease-out}.book-btn.small:hover{color:#29c770;border-color:#29c770;transform:translateY(-1px)}
-.tours-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:stretch}
-.tour-card{display:flex;flex-direction:column;height:100%}
-.tour-info{display:flex;flex-direction:column;flex-grow:1}
-.tour-bottom{margin-top:auto}
+.tour-card{position:relative;display:flex;flex-direction:column;background:rgba(11,15,13,.65);border:1px solid rgba(41,199,112,.15);border-radius:22px;box-shadow:0 2px 6px rgba(0,0,0,.22);overflow:hidden;transition:transform .18s ease-out,border-color .18s ease-out;cursor:pointer}.tour-card:hover{transform:translateY(-2px);border-color:rgba(41,199,112,.35)}
 .promo-wrapper{max-width:1400px;margin:60px auto}
 .promo-card{border-radius:22px;background:rgba(11,15,13,.75);border:1px solid rgba(41,199,112,.2);box-shadow:0 5px 14px rgba(0,0,0,.26);transition:transform .18s ease-out,border-color .18s ease-out}
 .promo-img{height:320px;overflow:hidden}
@@ -253,6 +272,32 @@ body .header{opacity:1!important;transform:translate(-50%,0)!important}
     gap:6px;
 }
 
+/* Tour Card specific overrides for expand/collapse */
+.tour-card .christmas-desc{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+}
+
+.tour-card .christmas-short{
+    width:100%;
+    max-height:none;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+.tour-card.expanded .christmas-short{
+    -webkit-line-clamp:unset;
+    max-height:none;
+    overflow:visible;
+}
+
+.tour-card.expanded .desc-toggle{
+    text-decoration:none;
+}
 
 .christmas-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
 .christmas-card .book-btn{

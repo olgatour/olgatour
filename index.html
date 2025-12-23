@@ -78,37 +78,42 @@
         <div class="tours-inner">
             <h2 class="tours-title" data-i18n="tours_preview_title">POPULAR TOURS</h2>
 
-            <div class="tours-layout">
-                <!-- Big Killarney -->
-                <div class="tour-card big">
-                    <img src="img/tours/killarney.jpg" alt="Killarney" loading="lazy">
-                    <div class="info">
-                        <h3 data-i18n="tour_killarney_title">Killarney</h3>
-                        <p class="desc" data-i18n="tour_killarney_desc">
-                            Killarney County Kerry — a journey through Ireland’s most magical landscapes.
-                        </p>
-                        <a href="tours.html" class="book-btn" data-i18n="btn_readmore">Read More</a>
-                    </div>
-                </div>
-
-                <div class="side-tours">
-                    <div class="tour-card small">
-                        <img src="img/tours/cork.jpg" alt="Cork & Titanic Experience" loading="lazy">
-                        <div class="info">
-                            <h3 data-i18n="tour_cork_title">Cork & Titanic</h3>
-                            <p data-i18n="tour_cork_desc">Walk through history — from Elizabeth Fort to the Titanic
-                                Museum.</p>
+            <div class="tours-preview-cards">
+                <!-- Left Card -->
+                <article class="tp-card tp-card--left">
+                    <img class="tp-card__media" src="img/tours/cork.jpg" alt="Cork & Titanic Experience" loading="lazy">
+                    <div class="tp-card__overlay">
+                        <h3 class="tp-card__title" data-i18n="tour_cork_title">Cork & Titanic</h3>
+                        <div class="tp-desc">
+                            <p class="tp-desc__text" data-i18n="tour_cork_desc">Walk through history — from Elizabeth Fort to the Titanic Museum.</p>
+                            <button class="desc-toggle" data-i18n="show_more" aria-expanded="false">Read more</button>
                         </div>
                     </div>
+                </article>
 
-                    <div class="tour-card small">
-                        <img src="img/tours/dingle.jpg" alt="Dingle Peninsula" loading="lazy">
-                        <div class="info">
-                            <h3 data-i18n="tour_dingle_title">Dingle Peninsula</h3>
-                            <p data-i18n="tour_dingle_desc">Rugged cliffs and wild Atlantic views.</p>
+                <!-- Center Card (Dominant) -->
+                <article class="tp-card tp-card--center">
+                    <img class="tp-card__media" src="img/tours/killarney.jpg" alt="Killarney" loading="lazy">
+                    <div class="tp-card__overlay">
+                        <h3 class="tp-card__title" data-i18n="tour_killarney_title">Killarney</h3>
+                        <div class="tp-desc">
+                            <p class="tp-desc__text" data-i18n="tour_killarney_desc">Killarney County Kerry — a journey through Ireland's most magical landscapes.</p>
+                            <button class="desc-toggle" data-i18n="show_more" aria-expanded="false">Read more</button>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <!-- Right Card -->
+                <article class="tp-card tp-card--right">
+                    <img class="tp-card__media" src="img/tours/dingle.jpg" alt="Dingle Peninsula" loading="lazy">
+                    <div class="tp-card__overlay">
+                        <h3 class="tp-card__title" data-i18n="tour_dingle_title">Dingle Peninsula</h3>
+                        <div class="tp-desc">
+                            <p class="tp-desc__text" data-i18n="tour_dingle_desc">Rugged cliffs and wild Atlantic views.</p>
+                            <button class="desc-toggle" data-i18n="show_more" aria-expanded="false">Read more</button>
+                        </div>
+                    </div>
+                </article>
             </div>
 
             <div class="more-tours">
